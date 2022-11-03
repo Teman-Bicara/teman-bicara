@@ -1,21 +1,19 @@
-import LoginPage from "./pages/LoginPage";
+import LoginPage from './pages/LoginPage';
 import React from 'react';
 
 function App() {
-
-
   return (
     <div className="App">
-      <h1 className="text-3xl text-teal-500 text-center">
+      <h1 className="text-center text-3xl text-teal-500">
         Tes Tailwind yagesya
       </h1>
-      <div className="flex items-center justify-center mt-10 hover:animate-bounce">
-        <div className="h-14 w-14 shadow-lg bg-sky-500"></div>
-        <div className="h-14 w-14 shadow-lg bg-red-500"></div>
-        <div className="h-14 w-14 shadow-lg bg-cyan-500"></div>
+      <div className="mt-10 flex items-center justify-center hover:animate-bounce">
+        <div className="h-14 w-14 bg-sky-500 shadow-lg"></div>
+        <div className="h-14 w-14 bg-red-500 shadow-lg"></div>
+        <div className="h-14 w-14 bg-cyan-500 shadow-lg"></div>
       </div>
       <main>
-        <LoginPage/>
+        <LoginPage />
       </main>
     </div>
   );
