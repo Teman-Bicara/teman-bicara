@@ -17,10 +17,6 @@
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "space"
-        ],
         "linebreak-style": [
             "error",
             "windows"
