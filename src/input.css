@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .input-label {
-  @apply mt-2 mb-4 block w-full rounded-lg border bg-transparent p-2 font-sans text-base font-thin text-primary;
+  @apply mt-2 mb-4 block w-full rounded-lg border bg-transparent p-2 font-sans text-base font-thin text-slate-800;
 }
