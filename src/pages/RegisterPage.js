@@ -1,9 +1,9 @@
 import React from 'react';
-import LoginInput from '../components/LoginInput';
+import RegisterInput from '../components/RegisterInput';
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
-    <div className="fixed mt-10 w-full lg:relative">
+    <div className="fixed mb-24 w-full lg:relative">
       <img
         src="assets/image/logo.png"
         alt="logo teman bicara"
@@ -12,14 +12,14 @@ const LoginPage = () => {
       <h2 className="mx-auto mt-4 text-center text-2xl font-bold text-slate-900">
         Teman Bicara
       </h2>
-      <LoginInput />
+      <RegisterInput />
       <p className="text-center text-base text-slate-600">
-        Dont have an account?{' '}
-        <span className="font-bold text-slate-700">SignUp</span>
+        Already have an account?{' '}
+        <span className="font-bold text-slate-700">Login</span>
       </p>
       <img src="assets/image/footer.png" className="mt-8 h-full w-full"></img>
     </div>
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
