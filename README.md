@@ -9,7 +9,7 @@ Teman Bicara merupakan sebuah platform atau forum untuk tempat berbagi permasala
 - TailwindCSS
 - React JS
 - Google Firebase
-
+- Figma https://www.figma.com/file/g0x8SzM6VdvQ47zV9M26hv/Teman-Bicara?node-id=0%3A1
 ---
 
 ## Setup
