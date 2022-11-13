@@ -1,4 +1,4 @@
-<h2 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Teman Bicara 🎉, MSIB DICODING PROJECT <img src="public/assets/meow_code.gif" width="50"></h2>
+<h2 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Teman Bicara 🎉, MSIB DICODING PROJECT <img src="public/assets/meow_code.gif" width="30"></h2>
 
 <p align="center">
     <a href="https://github.com/alifhanafiah/teman-bicara/issues"><img src="https://img.shields.io/github/issues/alifhanafiah/teman-bicara" alt="GitHub issues"></a>
