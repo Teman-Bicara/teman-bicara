@@ -1,4 +1,4 @@
-<h2 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Teman Bicara <img src="https://media4.giphy.com/media/xT0xeOGAGEAuQK1ujm/giphy.gif?cid=ecf05e47zdwdqikverunrt1ngqy65fdkninbsoihio9lh3ty&rid=giphy.gif&ct=g" width="50"></h2>
+<h2 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Teman Bicara 🎉, MSIB DICODING PROJECT <img src="public/assets/meow_code.gif" width="50"></h2>
 
 <p align="center">
     <a href="https://github.com/alifhanafiah/teman-bicara/issues"><img src="https://img.shields.io/github/issues/alifhanafiah/teman-bicara" alt="GitHub issues"></a>
@@ -15,15 +15,14 @@ Teman Bicara merupakan sebuah platform atau forum untuk tempat berbagi permasala
 
 ## Tech Stack
 Ini adalah beberapa core stack yang digunakan untuk membangun project saat ini: 
-- (TailwindCSS)[https://tailwindcss.com] digunakan untuk membangun UI dan styling pada project.
-- (React JS)[https://reactjs.org/] digunakan sebagai library JavaScript untuk menggunakan React.
-- (Google Firebase)[https://firebase.google.com/] digunakan untuk kebutuhan authentication dan cloud store.
+- [TailwindCSS](https://tailwindcss.com) digunakan untuk membangun UI dan styling pada project.
+- [React JS](https://reactjs.org/) digunakan sebagai library JavaScript untuk menggunakan React.
+- [Google Firebase](https://firebase.google.com/) digunakan untuk kebutuhan authentication dan cloud store.
 - Figma https://www.figma.com/file/g0x8SzM6VdvQ47zV9M26hv/Teman-Bicara?node-id=0%3A1
 
 <br>
 
 ## Setup Development
-
 Untuk menjalankan projek ini dengan menggunakan npm secara lokal.
 
 ```
