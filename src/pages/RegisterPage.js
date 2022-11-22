@@ -3,7 +3,7 @@ import RegisterInput from '../components/RegisterInput';
 
 const RegisterPage = () => {
   return (
-    <div className="fixed mb-24 w-full lg:relative">
+    <div>
       <img
         src="assets/image/logo.png"
         alt="logo teman bicara"
@@ -17,7 +17,7 @@ const RegisterPage = () => {
         Already have an account?{' '}
         <span className="font-bold text-slate-700">Login</span>
       </p>
-      <img src="assets/image/footer.png" className="mt-8 h-full w-full"></img>
+      <img src="assets/image/footer.png" className="fixed w-full lg:hidden"></img>
     </div>
   );
 };
