@@ -25,6 +25,7 @@ const LoginInput = ({ login }) => {
         value={email}
         onChange={onEmailChangeHandler}
         className="input-label"
+        required= 'true'
       />
 
       <label htmlFor="password">Password</label>
@@ -34,6 +35,7 @@ const LoginInput = ({ login }) => {
         value={password}
         onChange={onPasswordChangeHandler}
         className="input-label"
+        required= 'true'
       />
       <button className="mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
         Login

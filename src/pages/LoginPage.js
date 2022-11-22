@@ -3,7 +3,7 @@ import LoginInput from '../components/LoginInput';
 
 const LoginPage = () => {
   return (
-    <div className="fixed mt-10 w-full lg:relative">
+    <div>
       <img
         src="assets/image/logo.png"
         alt="logo teman bicara"
@@ -17,7 +17,7 @@ const LoginPage = () => {
         Dont have an account?{' '}
         <span className="font-bold text-slate-700">SignUp</span>
       </p>
-      <img src="assets/image/footer.png" className="mt-8 h-full w-full"></img>
+      <img src="assets/image/footer.png" className="fixed mt-10 w-full lg:hidden"></img>
     </div>
   );
 };
