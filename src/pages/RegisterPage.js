@@ -1,6 +1,6 @@
 import React from 'react';
 import RegisterInput from '../components/RegisterInput';
-
+import { Link } from 'react-router-dom';
 const RegisterPage = () => {
   return (
     <div>
@@ -15,7 +15,9 @@ const RegisterPage = () => {
       <RegisterInput />
       <p className="text-center text-base text-slate-600">
         Already have an account?{' '}
-        <span className="font-bold text-slate-700">Login</span>
+        <span className="font-bold text-slate-700">
+          <Link className='link' to='/login'></Link>
+        </span>
       </p>
       <img src="assets/image/footer.png" className="fixed w-full lg:hidden"></img>
     </div>

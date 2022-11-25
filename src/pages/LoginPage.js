@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginInput from '../components/LoginInput';
-
+import { Link } from 'react-router-dom';
 const LoginPage = () => {
   return (
     <div>
@@ -15,7 +15,9 @@ const LoginPage = () => {
       <LoginInput />
       <p className="text-center text-base text-slate-600">
         Dont have an account?{' '}
-        <span className="font-bold text-slate-700">SignUp</span>
+        <span className="font-bold text-slate-700">
+          <Link className='link' to='/register'>Signup</Link>
+        </span>
       </p>
       <img src="assets/image/footer.png" className="fixed mt-10 w-full lg:hidden"></img>
     </div>
