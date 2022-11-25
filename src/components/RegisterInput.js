@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-filename-extension */
 import PropTypes from 'prop-types';
 import React from 'react';
 import useInput from '../hooks/useInput';
 
-const RegisterInput = ({ register }) => {
+function RegisterInput({ register }) {
   const [username, onUsernameChangeHandler] = useInput('');
   const [email, onEmailChangeHandler] = useInput('');
   const [password, onPasswordChangeHandler] = useInput('');
@@ -26,7 +28,7 @@ const RegisterInput = ({ register }) => {
         value={username}
         onChange={onUsernameChangeHandler}
         className="input-label"
-        required='true'
+        required="true"
       />
 
       <label htmlFor="email">Email</label>
@@ -37,7 +39,7 @@ const RegisterInput = ({ register }) => {
         value={email}
         onChange={onEmailChangeHandler}
         className="input-label"
-        required='true'
+        required="true"
       />
 
       <label htmlFor="password">Password</label>
@@ -47,14 +49,14 @@ const RegisterInput = ({ register }) => {
         value={password}
         onChange={onPasswordChangeHandler}
         className="input-label"
-        required='true'
+        required="true"
       />
-      <button className="mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
+      <button type="submit" className="mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
         Sign up
       </button>
     </form>
   );
-};
+}
 
 RegisterInput.propTypes = {
   register: PropTypes.func.isRequired,

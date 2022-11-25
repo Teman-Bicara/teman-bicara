@@ -1,18 +1,14 @@
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import {  Routes, Route } from 'react-router-dom';
+// import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+// import {  Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/register">
-        <RegisterPage />
-      </Route>
-      <Route path="/login">
-        <LoginPage />
-      </Route>
-    </Routes>
+    <div>
+      <RegisterPage />
+    </div>
   );
 }
 
