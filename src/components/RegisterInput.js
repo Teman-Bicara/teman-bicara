@@ -18,7 +18,7 @@ function RegisterInput({ register }) {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="m-8 block text-lg font-semibold text-slate-900"
+      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0"
     >
       <label htmlFor="name">Username</label>
       <input
@@ -51,7 +51,7 @@ function RegisterInput({ register }) {
         className="input-label"
         required="true"
       />
-      <button type="submit" className="mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
+      <button type="submit" className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:py-11 lg:px-11 lg:w-auto lg:h-12 mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
         Sign up
       </button>
     </form>

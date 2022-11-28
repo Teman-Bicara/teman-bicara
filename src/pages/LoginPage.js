@@ -7,22 +7,22 @@ function LoginPage() {
   return (
     <div>
       <img
-        src="assets/image/logo.png"
+        src="assets/image/logo-fix.png"
         alt="logo teman bicara"
-        className="mx-auto mt-10"
+        className="w-[151px] h-[151px] top-[159px] left-[104px] mx-auto"
       />
-      <h2 className="mx-auto mt-4 text-center text-2xl font-bold text-slate-900">
+      <h2 className="mx-auto text-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-first to-second">
         Teman Bicara
       </h2>
       <LoginInput />
-      <p className="text-center text-base text-slate-600">
+      <p className="text-center text-base text-slate-600 lg:absolute lg:top-5 lg:right-10">
         Dont have an account?
         {' '}
         <span className="font-bold text-slate-700">
           <Link className="link" to="/register">Signup</Link>
         </span>
       </p>
-      <img src="assets/image/footer.png" className="fixed mt-10 w-full lg:hidden" alt="footer" />
+      <img src="assets/image/footer.png" className="fixed mt-10 w-full lg:hidden sm:hidden md:hidden" alt="footer" />
     </div>
   );
 }

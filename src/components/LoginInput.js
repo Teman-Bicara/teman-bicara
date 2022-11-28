@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-filename-extension */
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -16,7 +17,7 @@ function LoginInput({ login }) {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="m-8 block text-lg font-semibold text-slate-900"
+      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0"
     >
 
       <label htmlFor="email">Email</label>
@@ -39,7 +40,7 @@ function LoginInput({ login }) {
         className="input-label"
         required="true"
       />
-      <button type="submit" className="mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
+      <button type="submit" className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:py-[10px] lg:px-6 lg:w-24 lg:h-12 mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white hover:opacity-80">
         Login
       </button>
     </form>

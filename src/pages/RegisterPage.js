@@ -7,22 +7,21 @@ function RegisterPage() {
   return (
     <div>
       <img
-        src="assets/image/logo.png"
+        src="assets/image/logo-fix.png"
         alt="logo teman bicara"
-        className="mx-auto mt-10"
+        className="mx-auto w-[151px] h-[151px] left=[112px] top-[70px]"
       />
-      <h2 className="mx-auto mt-4 text-center text-2xl font-bold text-slate-900">
+      <h2 className="mx-auto mt-0 text-center text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-first to-second">
         Teman Bicara
       </h2>
       <RegisterInput />
-      <p className="text-center text-base text-slate-600">
+      <p className="text-center text-base text-slate-600 lg:absolute lg:top-5 lg:right-10">
         Already have an account?
         {' '}
-        <span className="font-bold text-slate-700">
+        <span className="font-bold text-slate-700 cursor-pointer">
           <Link className="link" to="/login">Login</Link>
         </span>
       </p>
-      <img src="assets/image/footer.png" className="fixed w-full lg:hidden" alt="footer" />
     </div>
   );
 }
