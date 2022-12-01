@@ -15,7 +15,7 @@ function LoginInput({ login }) {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
+      className="mt-12 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
     >
       <label htmlFor="email" className="md:text-center">Email</label>
       <input
@@ -37,7 +37,7 @@ function LoginInput({ login }) {
         className="input-field"
         required="true"
       />
-      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 px-5 py-3 rounded-md">
+      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md">
         Login
       </button>
     </form>

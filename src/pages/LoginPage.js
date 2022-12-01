@@ -9,7 +9,7 @@ function LoginPage() {
       <img
         src="assets/image/logo-tebi.png"
         alt="logo teman bicara"
-        className="mx-auto mb-[-2.2rem] pt-36"
+        className="mx-auto mb-[-2.2rem] pt-12"
       />
       <h2 className="mx-auto text-center text-2xl font-bold text-black">
         Teman Bicara
