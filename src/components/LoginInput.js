@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/jsx-filename-extension */
 import PropTypes from 'prop-types';
 import React from 'react';
 import useInput from '../hooks/useInput';
@@ -17,30 +15,29 @@ function LoginInput({ login }) {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0"
+      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
     >
-
-      <label htmlFor="email">Email</label>
+      <label htmlFor="email" className="md:text-center">Email</label>
       <input
         id="email"
         type="email"
-        placeholder="Enter your email here"
+        placeholder="lazar@codeday.org"
         value={email}
         onChange={onEmailChangeHandler}
-        className="input-label"
+        className="input-field"
         required="true"
       />
 
-      <label htmlFor="password">Password</label>
+      <label htmlFor="password" className="md:text-center">Password</label>
       <input
         type="password"
-        placeholder="Enter your password here"
+        placeholder="********"
         value={password}
         onChange={onPasswordChangeHandler}
-        className="input-label"
+        className="input-field"
         required="true"
       />
-      <button type="submit" className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:py-[10px] lg:px-6 lg:w-24 lg:h-12 mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white hover:opacity-80">
+      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 px-5 py-3 rounded-md">
         Login
       </button>
     </form>

@@ -8,14 +8,12 @@ function App() {
   const register = '/register';
 
   return (
-    <div className="min-h-screen">
-      <main>
-        <Routes>
-          <Route path={login} element={<LoginPage />} />
-          <Route path={register} element={<RegisterPage />} />
-        </Routes>
-      </main>
-    </div>
+    <main>
+      <Routes>
+        <Route path={login} element={<LoginPage />} />
+        <Route path={register} element={<RegisterPage />} />
+      </Routes>
+    </main>
   );
 }
 
