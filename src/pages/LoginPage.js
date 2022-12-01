@@ -5,7 +5,7 @@ import LoginInput from '../components/LoginInput';
 
 function LoginPage() {
   return (
-    <div>
+    <div className="relative">
       <img
         src="assets/image/logo-fix.png"
         alt="logo teman bicara"
@@ -22,7 +22,7 @@ function LoginPage() {
           <Link className="link" to="/register">Signup</Link>
         </span>
       </p>
-      <img src="assets/image/footer.png" className="fixed mt-10 w-full lg:hidden sm:hidden md:hidden" alt="footer" />
+      <img src="assets/image/footer.png" className="fixed bottom-0 w-full lg:hidden sm:hidden md:hidden" alt="footer" />
     </div>
   );
 }

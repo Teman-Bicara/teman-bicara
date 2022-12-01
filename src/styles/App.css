@@ -559,6 +559,10 @@ video {
   position: fixed;
 }
 
+.relative {
+  position: relative;
+}
+
 .top-\[159px\] {
   top: 159px;
 }
@@ -569,6 +573,10 @@ video {
 
 .top-\[70px\] {
   top: 70px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .m-8 {
