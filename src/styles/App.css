@@ -600,6 +600,10 @@ video {
   height: 151px;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }

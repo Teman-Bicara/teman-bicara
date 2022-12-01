@@ -1,13 +1,23 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-// import { Routes, Route } from 'react-router-dom';
-// import LoginPage from './pages/LoginPage';
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 
 function App() {
+  const login = '/*';
+  const register = '/register';
+
   return (
-    <div>
-      <RegisterPage />
+    <div className="min-h-screen">
+      <main>
+        <Routes>
+          <Route
+            path={login}
+            element={<LoginPage />}
+          />
+          <Route path={register} element={<RegisterPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }
