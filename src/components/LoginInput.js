@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import axios from 'axios';
 import React, { useRef } from 'react';
 
@@ -12,7 +13,7 @@ function LoginInput() {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
-      console.log(res);
+      res.data && window.location.replace('/landingpage');
     } catch (error) {
       alert(error);
     }

@@ -555,6 +555,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .fixed {
   position: fixed;
 }
@@ -563,7 +597,6 @@ video {
   position: absolute;
 }
 
-<<<<<<< HEAD
 .relative {
   position: relative;
 }
@@ -572,8 +605,6 @@ video {
   bottom: 0px;
 }
 
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .left-0 {
   left: 0px;
 }
@@ -590,20 +621,16 @@ video {
   z-index: -10;
 }
 
-<<<<<<< HEAD
 .mx-\[-1\.5rem\] {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
 
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-<<<<<<< HEAD
 .mt-32 {
   margin-top: 8rem;
 }
@@ -616,8 +643,6 @@ video {
   margin-bottom: -2.6rem;
 }
 
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .mt-12 {
   margin-top: 3rem;
 }
@@ -634,7 +659,6 @@ video {
   display: block;
 }
 
-<<<<<<< HEAD
 .inline-block {
   display: inline-block;
 }
@@ -647,74 +671,32 @@ video {
   height: 100vh;
 }
 
-.h-52 {
-  height: 13rem;
-}
-
-.max-h-40 {
-  max-height: 10rem;
-}
-
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
-.max-h-96 {
-  max-height: 24rem;
-}
-
-.max-h-48 {
-  max-height: 12rem;
-}
-
 .max-h-52 {
   max-height: 13rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
 }
 
-.min-h-full {
-  min-height: 100%;
-}
-
 .w-full {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .min-w-full {
   min-width: 100%;
 }
 
-.min-w-fit {
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .max-w-\[30\%\] {
   max-width: 30%;
 }
 
 .max-w-\[80\%\] {
   max-width: 80%;
-<<<<<<< HEAD
-}
-
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-150 {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .scale-y-150 {
@@ -729,8 +711,6 @@ video {
 
 .justify-center {
   justify-content: center;
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 }
 
 .overflow-hidden {
@@ -750,14 +730,11 @@ video {
   background-color: rgb(46 39 125 / var(--tw-bg-opacity));
 }
 
-<<<<<<< HEAD
 .bg-\[\#8C4AF7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(140 74 247 / var(--tw-bg-opacity));
 }
 
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -786,13 +763,10 @@ video {
   line-height: 1.5rem;
 }
 
-<<<<<<< HEAD
 .font-bold {
   font-weight: 700;
 }
 
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .font-semibold {
   font-weight: 600;
 }
@@ -822,13 +796,10 @@ video {
   color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
-<<<<<<< HEAD
 .outline {
   outline-style: solid;
 }
 
-=======
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 .input-field {
   margin-left: auto;
   margin-right: auto;
@@ -845,13 +816,10 @@ video {
   font-weight: 200;
 }
 
-<<<<<<< HEAD
-=======
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }
 
->>>>>>> 2c7057907afe0716571ff2f2ac0a1d11b5e93dd8
 @media (min-width: 640px) {
   .sm\:max-w-2xl {
     max-width: 42rem;
