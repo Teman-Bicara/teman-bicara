@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import RegisterInput from '../components/RegisterInput';
@@ -19,10 +18,12 @@ function RegisterPage() {
         Already have an account?
         {' '}
         <span className="font-bold text-slate-700">
-          <Link className="link" to="/login">Login</Link>
+          <Link to="/login">Login</Link>
         </span>
       </p>
-      <img src="assets/image/footer.png" className="fixed bottom-0 left-0 w-full max-h-96 -z-10" alt="footer" />
+      <div className="fixed bottom-0 left-0 min-w-full max-h-96 -z-10">
+        <img src="assets/image/footer1.svg" alt=" " />
+      </div>
     </div>
   );
 }
