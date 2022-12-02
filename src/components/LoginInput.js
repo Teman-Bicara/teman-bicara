@@ -1,15 +1,21 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import useInput from '../hooks/useInput';
+import axios from 'axios';
+import React, { useRef } from 'react';
 
-function LoginInput({ login }) {
-  const [email, onEmailChangeHandler] = useInput('');
-  const [password, onPasswordChangeHandler] = useInput('');
+function LoginInput() {
+  const userRef = useRef();
+  const passwordRef = useRef();
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
-
-    login({ email, password });
+    try {
+      const res = await axios.post('http://localhost:5000/api/auth/login', {
+        username: userRef.current.value,
+        password: passwordRef.current.value,
+      });
+      console.log(res);
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
@@ -17,13 +23,12 @@ function LoginInput({ login }) {
       onSubmit={onSubmitHandler}
       className="mt-12 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
     >
-      <label htmlFor="email" className="md:text-center">Email</label>
+      <label htmlFor="username" className="md:text-center">Username</label>
       <input
-        id="email"
-        type="email"
+        id="username"
+        type="text"
         placeholder="lazar@codeday.org"
-        value={email}
-        onChange={onEmailChangeHandler}
+        ref={userRef}
         className="input-field"
         required="true"
       />
@@ -32,20 +37,15 @@ function LoginInput({ login }) {
       <input
         type="password"
         placeholder="********"
-        value={password}
-        onChange={onPasswordChangeHandler}
+        ref={passwordRef}
         className="input-field"
         required="true"
       />
-      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md">
+      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md hover:opacity-80">
         Login
       </button>
     </form>
   );
 }
-
-LoginInput.propTypes = {
-  login: PropTypes.func.isRequired,
-};
 
 export default LoginInput;
