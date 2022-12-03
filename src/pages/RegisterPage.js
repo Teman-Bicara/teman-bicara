@@ -6,9 +6,9 @@ function RegisterPage() {
   return (
     <div className="min-h-screen w-full mx-auto max-w-[80%]">
       <img
-        src="assets/image/logo-tebi.png"
+        src="assets/image/logo-tebi.svg"
         alt="logo teman bicara"
-        className="mx-auto mb-[-2.2rem] pt-12"
+        className="mx-auto mb-[-1rem] pt-12"
       />
       <h2 className="mx-auto text-center text-2xl font-bold text-black">
         Teman Bicara
