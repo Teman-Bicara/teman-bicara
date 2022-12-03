@@ -1,7 +1,10 @@
 import React from 'react';
+import HomePageNav from '../components/HomePageNav';
 
 export default function HomePage() {
   return (
-    <div>HomePage</div>
+    <div>
+      <HomePageNav />
+    </div>
   );
 }
