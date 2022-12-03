@@ -636,6 +636,11 @@ video {
   margin-right: auto;
 }
 
+.mx-\[-2rem\] {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -662,6 +667,18 @@ video {
 
 .mb-\[-2\.2rem\] {
   margin-bottom: -2.2rem;
+}
+
+.mb-\[-3rem\] {
+  margin-bottom: -3rem;
+}
+
+.mb-\[-4rem\] {
+  margin-bottom: -4rem;
+}
+
+.mb-\[-5rem\] {
+  margin-bottom: -5rem;
 }
 
 .block {
