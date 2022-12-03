@@ -6,10 +6,10 @@ import LandingPageNav from '../components/LandingPageNav';
 function LandingPage() {
   return (
     <>
-      <header className="container mx-auto outline">
+      <header className="container mx-auto">
         <LandingPageNav />
       </header>
-      <main className="container mx-auto h-screen">
+      <main className="font-inter">
         <LandingPageMain />
       </main>
       <footer className="text-center bg-[#8C4AF7] font-poppins">

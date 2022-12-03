@@ -5,7 +5,7 @@ function LandingPageNav() {
   return (
     <nav className="flex">
       <img
-        src="assets/image/logo-tebi.png"
+        src="assets/image/logo-tebi.svg"
         alt="logo teman bicara"
       />
 
