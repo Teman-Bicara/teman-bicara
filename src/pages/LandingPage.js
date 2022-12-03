@@ -12,7 +12,7 @@ function LandingPage() {
       <main className="container mx-auto h-screen">
         <LandingPageMain />
       </main>
-      <footer className="text-center bg-[#8C4AF7]">
+      <footer className="text-center bg-[#8C4AF7] font-poppins">
         <LandingPageFooter />
       </footer>
     </>
