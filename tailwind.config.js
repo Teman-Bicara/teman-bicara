@@ -8,9 +8,8 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
-      colors: {
-        first: '#8C4AF7',
-        second: '#6C53FF',
+      screens: {
+        xs: { max: '640px' },
       },
     },
   },
