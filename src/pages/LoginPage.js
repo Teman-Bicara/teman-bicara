@@ -1,17 +1,16 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LoginInput from '../components/LoginInput';
 
 function LoginPage() {
   return (
-    <div>
+    <div className="min-h-screen w-full mx-auto max-w-[80%]">
       <img
-        src="assets/image/logo-fix.png"
+        src="assets/image/logo-tebi.svg"
         alt="logo teman bicara"
-        className="w-[151px] h-[151px] top-[159px] left-[104px] mx-auto"
+        className="mx-auto mb-[-1rem] pt-12"
       />
-      <h2 className="mx-auto text-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-first to-second">
+      <h2 className="mx-auto text-center text-2xl font-bold text-black">
         Teman Bicara
       </h2>
       <LoginInput />
@@ -19,10 +18,12 @@ function LoginPage() {
         Dont have an account?
         {' '}
         <span className="font-bold text-slate-700">
-          <Link className="link" to="/register">Signup</Link>
+          <Link to="/register">Signup</Link>
         </span>
       </p>
-      <img src="assets/image/footer.png" className="fixed mt-10 w-full lg:hidden sm:hidden md:hidden" alt="footer" />
+      <div className="fixed bottom-0 left-0 min-w-full max-h-96 -z-10">
+        <img src="assets/image/footer1.svg" alt=" " />
+      </div>
     </div>
   );
 }

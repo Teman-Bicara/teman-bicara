@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.input-label {
-  @apply mt-2 mb-4 block w-full rounded-lg border bg-transparent p-2 font-sans text-base font-thin text-slate-800 lg:w-80 lg:h-10;
+body {
+  @apply overflow-x-hidden
+}
+
+.input-field {
+  @apply block w-full bg-slate-100 font-extralight py-2 px-4 rounded-lg mb-4 mx-auto
 }

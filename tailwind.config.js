@@ -2,13 +2,14 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
-    fontFamily: {
-      sans: 'Inter, Helvetica, Arial, sans-serif',
-    },
     extend: {
-      colors: {
-        first: '#8C4AF7',
-        second: '#6C53FF',
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      screens: {
+        xs: { max: '640px' },
       },
     },
   },

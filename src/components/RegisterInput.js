@@ -1,65 +1,76 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/jsx-filename-extension */
-import PropTypes from 'prop-types';
-import React from 'react';
-import useInput from '../hooks/useInput';
+/* eslint-disable no-unused-expressions */
+// import PropTypes from 'prop-types';
+import axios from 'axios';
+import React, { useState } from 'react';
 
-function RegisterInput({ register }) {
-  const [username, onUsernameChangeHandler] = useInput('');
-  const [email, onEmailChangeHandler] = useInput('');
-  const [password, onPasswordChangeHandler] = useInput('');
+function RegisterInput() {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
-
-    register({ username, email, password });
+    setError(false);
+    try {
+      const res = await axios.post('http://localhost:5000/api/auth/register', {
+        username, email, password,
+      });
+      res.data && window.location.replace('/login');
+    } catch (err) {
+      setError(true);
+    }
   };
 
   return (
-    <form
-      onSubmit={onSubmitHandler}
-      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0"
-    >
-      <label htmlFor="name">Username</label>
-      <input
-        id="name"
-        type="name"
-        placeholder="Enter your name here"
-        value={username}
-        onChange={onUsernameChangeHandler}
-        className="input-label"
-        required="true"
-      />
+    <div>
+      <form
+        onSubmit={onSubmitHandler}
+        className="mt-4 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
+      >
+        <label htmlFor="name" className="md:text-center">Username</label>
+        <input
+          id="name"
+          type="name"
+          placeholder="lazar"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="input-field"
+          required="true"
+        />
 
-      <label htmlFor="email">Email</label>
-      <input
-        id="email"
-        type="email"
-        placeholder="Enter your email here"
-        value={email}
-        onChange={onEmailChangeHandler}
-        className="input-label"
-        required="true"
-      />
+        <label htmlFor="email" className="md:text-center">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="lazar@codeday.org"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="input-field"
+          required="true"
+        />
 
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        placeholder="Enter your password here"
-        value={password}
-        onChange={onPasswordChangeHandler}
-        className="input-label"
-        required="true"
-      />
-      <button type="submit" className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:py-11 lg:px-11 lg:w-auto lg:h-12 mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white">
-        Sign up
-      </button>
-    </form>
+        <label htmlFor="password" className="md:text-center">Password</label>
+        <input
+          type="password"
+          placeholder="********"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input-field"
+          required="true"
+        />
+        <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md whitespace-nowrap hover:opacity-80">
+          Sign up
+        </button>
+      </form>
+      {error && <span style={{ color: 'red', fontWeight: 'bold', marginTop: '10px' }}>Something went wrong!</span>}
+    </div>
+
   );
 }
 
-RegisterInput.propTypes = {
-  register: PropTypes.func.isRequired,
-};
+// RegisterInput.propTypes = {
+//   register: PropTypes.func.isRequired,
+// };
 
 export default RegisterInput;

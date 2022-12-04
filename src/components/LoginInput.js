@@ -1,54 +1,52 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/jsx-filename-extension */
-import PropTypes from 'prop-types';
-import React from 'react';
-import useInput from '../hooks/useInput';
+/* eslint-disable no-unused-expressions */
+import axios from 'axios';
+import React, { useRef } from 'react';
 
-function LoginInput({ login }) {
-  const [email, onEmailChangeHandler] = useInput('');
-  const [password, onPasswordChangeHandler] = useInput('');
+function LoginInput() {
+  const userRef = useRef();
+  const passwordRef = useRef();
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
-
-    login({ email, password });
+    try {
+      const res = await axios.post('http://localhost:5000/api/auth/login', {
+        username: userRef.current.value,
+        password: passwordRef.current.value,
+      });
+      res.data && window.location.replace('/landingpage');
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="m-8 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0"
+      className="mt-12 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
     >
-
-      <label htmlFor="email">Email</label>
+      <label htmlFor="username" className="md:text-center">Username</label>
       <input
-        id="email"
-        type="email"
-        placeholder="Enter your email here"
-        value={email}
-        onChange={onEmailChangeHandler}
-        className="input-label"
+        id="username"
+        type="text"
+        placeholder="lazar@codeday.org"
+        ref={userRef}
+        className="input-field"
         required="true"
       />
 
-      <label htmlFor="password">Password</label>
+      <label htmlFor="password" className="md:text-center">Password</label>
       <input
         type="password"
-        placeholder="Enter your password here"
-        value={password}
-        onChange={onPasswordChangeHandler}
-        className="input-label"
+        placeholder="********"
+        ref={passwordRef}
+        className="input-field"
         required="true"
       />
-      <button type="submit" className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:py-[10px] lg:px-6 lg:w-24 lg:h-12 mx-auto h-full w-full cursor-pointer items-center justify-center rounded-lg border bg-gradient-to-r from-first to-second p-3 text-2xl font-semibold text-white hover:opacity-80">
+      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md hover:opacity-80">
         Login
       </button>
     </form>
   );
 }
-
-LoginInput.propTypes = {
-  login: PropTypes.func.isRequired,
-};
 
 export default LoginInput;
