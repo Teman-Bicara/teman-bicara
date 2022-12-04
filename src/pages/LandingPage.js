@@ -6,7 +6,7 @@ import LandingPageNav from '../components/LandingPageNav';
 function LandingPage() {
   return (
     <>
-      <header className="container mx-auto">
+      <header className="w-full mx-auto md:max-w-[90%]">
         <LandingPageNav />
       </header>
       <main className="font-inter">
