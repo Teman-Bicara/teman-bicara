@@ -60,7 +60,7 @@ function TeamProjectInfo() {
           </div>
 
           <div className="bg-[#304652AD] rounded-2xl relative px-11 shadow-2xl">
-            <img src="assets/image/profil1.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
+            <img src="assets/image/profil3.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
             <h1 className="text-[#2DF8BB] font-bold text-2xl mt-20 mb-1">Muhammad Raihan Ramadhan</h1>
             <p className="text-white font-bold mb-4">Universitas Nusa Mandiri</p>
             <p className="text-white font-bold mb-8">
@@ -87,12 +87,13 @@ function TeamProjectInfo() {
           </div>
 
           <div className="bg-[#FFFFFFAD] rounded-2xl relative px-11 shadow-2xl">
-            <img src="assets/image/profil3.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
+            <img src="assets/image/profil4.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
             <h1 className="text-[#8C4AF7] font-bold text-2xl mt-20 mb-1">Laida Lavenia. H</h1>
-            <p className="text-[#304652] font-bold mb-4">Universitas Putra Indonesia Yptk Padang</p>
+            <p className="text-[#304652] font-bold mb-4">
+              Universitas Jember
+            </p>
             <p className="text-[#304652] font-bold mb-8">
-              Saya seorang Front-end Development Website pemula yang berdomisili di jakarta.
-              Sekarang saya adalah mahasiswa semester 7 di Universitas Nusa Mandiri
+              Saya merupakan seorang mahasiswa semester 5 dari jurusan Teknologi Informasi. Dan saya juga suka mempelajari hal-hal baru yang bisa menambah skill saya terutama di bidang IT yaitu Front End Web Developer
             </p>
             <ul className="flex gap-8 mb-12">
               <li>

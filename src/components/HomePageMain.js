@@ -47,13 +47,13 @@ export default function HomePageMain() {
 
         <div className="grid grid-cols-3 w-full px-5  my-3">
           <a className="flex flex-row justify-center items-center w-full space-x-3 ">
-            <AiOutlineLike className="w-7 h-7 hover:text-blue-600 cursor-pointer" />
+            <AiOutlineLike className="w-7 h-7 hover:text-blue-600 hover:scale-150 cursor-pointer" />
           </a>
           <a className="flex flex-row justify-center items-center w-full space-x-3">
-            <BiCommentDetail className="w-7 h-7 hover:text-yellow-600 cursor-pointer" />
+            <BiCommentDetail className="w-7 h-7 hover:text-yellow-600 hover:scale-150 cursor-pointer" />
           </a>
           <a className="flex flex-row justify-center items-center w-full space-x-3">
-            <AiOutlineShareAlt className="w-7 h-7 hover:text-red-600 cursor-pointer" />
+            <AiOutlineShareAlt className="w-7 h-7 hover:text-red-600 hover:scale-150 cursor-pointer" />
           </a>
         </div>
       </div>
@@ -83,13 +83,13 @@ export default function HomePageMain() {
         </div>
         <div className="grid grid-cols-3 w-full px-5  my-3">
           <a className="flex flex-row justify-center items-center w-full space-x-3 ">
-            <AiOutlineLike className="w-7 h-7 hover:text-blue-600 cursor-pointer" />
+            <AiOutlineLike className="w-7 h-7 hover:text-blue-600 hover:scale-150 cursor-pointer" />
           </a>
           <a className="flex flex-row justify-center items-center w-full space-x-3">
-            <BiCommentDetail className="w-7 h-7 hover:text-yellow-600 cursor-pointer" />
+            <BiCommentDetail className="w-7 h-7 hover:text-yellow-600 hover:scale-150 cursor-pointer" />
           </a>
           <a className="flex flex-row justify-center items-center w-full space-x-3">
-            <AiOutlineShareAlt className="w-7 h-7 hover:text-red-600 cursor-pointer" />
+            <AiOutlineShareAlt className="w-7 h-7 hover:text-red-600 hover:scale-150 cursor-pointer" />
           </a>
         </div>
       </div>
