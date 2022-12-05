@@ -1450,6 +1450,11 @@ body {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (max-width: 640px) {
