@@ -13,7 +13,7 @@ function LoginInput() {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
-      res.data && window.location.replace('/landingpage');
+      res.data && window.location.replace('/home');
     } catch (error) {
       alert(error);
     }

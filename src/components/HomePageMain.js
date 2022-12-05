@@ -1,11 +1,24 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineLike, AiOutlineShareAlt } from 'react-icons/ai';
 import { BiCommentDetail } from 'react-icons/bi';
+import { useLocation } from 'react-router-dom';
 
 export default function HomePageMain() {
+  const [posts, setPosts] = useState([]);
+  const { search } = useLocation();
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const res = await axios.get(`http://localhost:5000/api/posts/${search}`);
+      console.log(res.data);
+    };
+    getPosts();
+  }, [search]);
   return (
     <>
       <div className="bg-[#E6E5F3] w-full rounded-md shadow-md h-auto py-3 px-3 my-5">
