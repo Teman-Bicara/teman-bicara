@@ -2,7 +2,7 @@ import React from 'react';
 
 function TeamProjectInfo() {
   return (
-    <section className="bg-cover bg-no-repeat bg-center pt-8 pb-16" style={{ backgroundImage: 'url(\'assets/image/background-teamproject.png\')' }}>
+    <section className="bg-cover bg-no-repeat bg-center pt-8 pb-16" style={{ backgroundImage: 'url(\'assets/image/background-teamproject.png\')' }} id="about-us">
       <div className="max-w-[85%] mx-auto xl:max-w-[70%]">
         <h2 className="font-bold text-base bg-white text-center text-[#304652] py-2 mb-8 mx-auto  max-w-md shadow-2xl xl:text-5xl xl:py-6 xl:max-w-xl">Team Project</h2>
         <div className="grid gap-20 mt-20 md:grid-cols-2 xl:gap-32">
