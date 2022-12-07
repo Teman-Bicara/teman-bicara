@@ -13,7 +13,7 @@ export default function PostItem({ post }) {
     <div className="bg-[#E6E5F3] w-full rounded-md shadow-md h-auto py-3 px-3 my-5 xs:w-[334px] xs:h-[150px] xs:mx-auto xs:">
       <div className="w-full h-16 flex items-center justify-between ">
         <div className="flex">
-          <img className=" rounded-full w-10 h-10 mr-3" src={post.profilePic} alt="profilepicture" />
+          <img className=" rounded-full w-10 h-10 mr-3" src="assets/image/profildefault.jpg" alt="profilepicture" />
           <div>
             <h3 className="text-md font-semibold ">{post.username}</h3>
           </div>

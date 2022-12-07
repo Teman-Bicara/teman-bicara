@@ -4,12 +4,14 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
+import AddPost from './pages/AddPage';
 
 function App() {
   const landingPage = '/*';
   const login = '/login';
   const register = '/register';
   const homePage = '/home';
+  const addPost = '/new/post';
 
   const authedUser = null;
   const loading = false;
@@ -25,6 +27,7 @@ function App() {
         <Route path={login} element={<LoginPage />} />
         <Route path={register} element={<RegisterPage />} />
         <Route path={homePage} element={<HomePage />} />
+        <Route path={addPost} element={<AddPost />} />
       </Routes>
     );
   }
@@ -36,6 +39,7 @@ function App() {
         <Route path={login} element={<LoginPage />} />
         <Route path={register} element={<RegisterPage />} />
         <Route path={homePage} element={<HomePage />} />
+        <Route path={addPost} element={<AddPost />} />
       </Routes>
     </main>
   );

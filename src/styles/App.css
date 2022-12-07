@@ -692,14 +692,6 @@ video {
   margin-right: 0.75rem;
 }
 
-.-ml-1 {
-  margin-left: -0.25rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
@@ -760,10 +752,6 @@ video {
   height: 2.5rem;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-7 {
   height: 1.75rem;
 }
@@ -804,14 +792,6 @@ video {
 
 .w-10 {
   width: 2.5rem;
-}
-
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-3 {
-  width: 0.75rem;
 }
 
 .w-7 {
@@ -962,16 +942,6 @@ video {
   background-color: rgb(230 229 243 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#FFFFFFAD\] {
   background-color: #FFFFFFAD;
 }
@@ -994,14 +964,6 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
-}
-
-.fill-current {
-  fill: currentColor;
-}
-
-.stroke-current {
-  stroke: currentColor;
 }
 
 .p-4 {
@@ -1306,16 +1268,8 @@ body {
     display: none;
   }
 
-  .sm\:h-\[150px\] {
-    height: 150px;
-  }
-
   .sm\:w-\[70\%\] {
     width: 70%;
-  }
-
-  .sm\:w-\[334px\] {
-    width: 334px;
   }
 
   .sm\:max-w-2xl {
@@ -1447,21 +1401,12 @@ body {
     position: absolute;
   }
 
-  .lg\:relative {
-    position: relative;
-  }
-
   .lg\:top-5 {
     top: 1.25rem;
   }
 
   .lg\:right-10 {
     right: 2.5rem;
-  }
-
-  .lg\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .lg\:flex {
@@ -1472,48 +1417,12 @@ body {
     display: grid;
   }
 
-  .lg\:h-\[150px\] {
-    height: 150px;
-  }
-
-  .lg\:h-full {
-    height: 100%;
-  }
-
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
-  .lg\:h-auto {
-    height: auto;
-  }
-
-  .lg\:w-\[334px\] {
-    width: 334px;
-  }
-
-  .lg\:w-full {
-    width: 100%;
-  }
-
-  .lg\:w-screen {
-    width: 100vw;
-  }
-
-  .lg\:w-auto {
-    width: auto;
-  }
-
   .lg\:flex-col {
     flex-direction: column;
   }
 
   .lg\:items-center {
     align-items: center;
-  }
-
-  .lg\:to-inherit {
-    --tw-gradient-to: inherit;
   }
 
   .lg\:p-0 {
