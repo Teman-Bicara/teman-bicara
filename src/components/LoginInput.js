@@ -1,22 +1,17 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-expressions */
-import axios from 'axios';
-import React, { useRef } from 'react';
+import React from 'react';
+// import PropTypes from 'prop-types';
+import useInput from '../hooks/useInput';
 
-function LoginInput() {
-  const userRef = useRef();
-  const passwordRef = useRef();
+function LoginInput({ login }) {
+  const [name, onNameHandler] = useInput('');
+  const [password, onPasswordHandler] = useInput('');
 
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
-        username: userRef.current.value,
-        password: passwordRef.current.value,
-      });
-      res.data && window.location.replace('/home');
-    } catch (error) {
-      alert(error);
-    }
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+
+    login({ name, password });
   };
 
   return (
@@ -29,7 +24,7 @@ function LoginInput() {
         id="username"
         type="text"
         placeholder="lazar@codeday.org"
-        ref={userRef}
+        ref={onNameHandler}
         className="input-field"
         required="true"
       />
@@ -38,7 +33,7 @@ function LoginInput() {
       <input
         type="password"
         placeholder="********"
-        ref={passwordRef}
+        ref={onPasswordHandler}
         className="input-field"
         required="true"
       />
@@ -48,5 +43,9 @@ function LoginInput() {
     </form>
   );
 }
+
+// LoginInput.propTypes = {
+//   login: PropTypes.func.isRequired,
+// };
 
 export default LoginInput;

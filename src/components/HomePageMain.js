@@ -6,18 +6,26 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Posts from './Posts';
+import { getActiveNotes } from '../utils/api';
 
 export default function HomePageMain() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getPosts = async () => {
-      const res = await axios.get(`http://localhost:5000/api/posts/${search}`);
-      setPosts(res.data);
+    const fetchGetNotes = async () => {
+      try {
+        const { data } = await getActiveNotes();
+        setPosts(data);
+        setLoading(false);
+      } catch (error) {
+        alert(error);
+      }
     };
-    getPosts();
-  }, [search]);
+
+    fetchGetNotes();
+  }, []);
   return (
     <Posts posts={posts} />
   );

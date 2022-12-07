@@ -1,25 +1,18 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-expressions */
-// import PropTypes from 'prop-types';
-import axios from 'axios';
-import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
+import useInput from '../hooks/useInput';
 
-function RegisterInput() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(false);
+function RegisterInput({ register }) {
+  const [name, onNameHandler] = useInput('');
+  const [email, onEmailHandler] = useInput('');
+  const [password, onPasswordHandler] = useInput('');
 
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
-    setError(false);
-    try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', {
-        username, email, password,
-      });
-      res.data && window.location.replace('/login');
-    } catch (err) {
-      setError(true);
-    }
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+
+    register({ name, email, password });
   };
 
   return (
@@ -33,8 +26,8 @@ function RegisterInput() {
           id="name"
           type="name"
           placeholder="lazar"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={name}
+          onChange={onNameHandler}
           className="input-field"
           required="true"
         />
@@ -45,7 +38,7 @@ function RegisterInput() {
           type="email"
           placeholder="lazar@codeday.org"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={onEmailHandler}
           className="input-field"
           required="true"
         />
@@ -55,7 +48,7 @@ function RegisterInput() {
           type="password"
           placeholder="********"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={onPasswordHandler}
           className="input-field"
           required="true"
         />
@@ -63,14 +56,13 @@ function RegisterInput() {
           Sign up
         </button>
       </form>
-      {error && <span style={{ color: 'red', fontWeight: 'bold', marginTop: '10px' }}>Something went wrong!</span>}
     </div>
 
   );
 }
 
-// RegisterInput.propTypes = {
-//   register: PropTypes.func.isRequired,
-// };
+RegisterInput.propTypes = {
+  register: PropTypes.func.isRequired,
+};
 
 export default RegisterInput;
