@@ -38,7 +38,7 @@ function LandingPageMain() {
             Dengan adanya platform forum ini diharapkan para remaja lebih berani untuk menceritakan permasalahan kesehatan mental yang sedang dialami pada orang lain.
           </p>
         </section>
-        <div className="max-w-4xl p-4 text-gray-800 bg-gray-200 rounded-lg shadow">
+        <div className="max-w-4xl p-4 text-gray-800 bg-gray-200 rounded-lg shadow mx-auto">
           <div className="mb-2">
             <div className="h-3 text-3xl text-left text-gray-600">“</div>
             <p className="px-4 text-xl text-center text-gray-600 font-inter font-semibold italic">
