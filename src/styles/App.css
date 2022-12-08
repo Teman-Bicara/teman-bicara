@@ -572,10 +572,6 @@ video {
   right: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -598,6 +594,10 @@ video {
 
 .left-4 {
   left: 1rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .top-0 {
@@ -722,10 +722,6 @@ video {
 
 .hidden {
   display: none;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .h-8 {
@@ -910,6 +906,10 @@ video {
 
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-white {
@@ -1516,6 +1516,10 @@ body {
 
   .xs\:block {
     display: block;
+  }
+
+  .xs\:hidden {
+    display: none;
   }
 
   .xs\:h-\[150px\] {

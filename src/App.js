@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import AddPost from './pages/AddPage';
+import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import HomePage from './pages/HomePage';
-import AddPost from './pages/AddPage';
 
 function App() {
   const landingPage = '/*';
@@ -19,6 +19,15 @@ function App() {
   if (loading) {
     return null;
   }
+
+  // hapus kalau udah selesai slicing
+  const slicing = true;
+  if (slicing) {
+    return (
+      <AddPost />
+    );
+  }
+  // hapus kalau udah selesai slicing
 
   if (authedUser === null) {
     return (
