@@ -12,9 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "commenter": {
+      "type": "string"
+    },
     "comment": {
-      "type": "text",
-      "required": false
+      "type": "text"
     },
     "post": {
       "type": "relation",
