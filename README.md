@@ -15,10 +15,9 @@ Teman Bicara merupakan sebuah platform atau forum untuk tempat berbagi permasala
 
 ## Tech Stack
 Ini adalah beberapa core stack yang digunakan untuk membangun project saat ini: 
-- MERN Stack
-- React and Tailwind (for UI and Styling)
-- Node Express (for authentication user and CRUD posts)
-- MongoDB (for databases)
+- React (using create-react-app)
+- TailwindCSS (for styling and UI)
+- Strapi (cms headless for database store and auth)
 
 <br>
 
@@ -31,6 +30,12 @@ $ cd teman-bicara
 $ npm install
 $ npm run dev (TailwindCSS)
 $ npm start
+
+---
+Untuk menjalankan strapi database:
+$ cd api
+$ npm install
+$ npm run develop
 ```
 <br>
 
