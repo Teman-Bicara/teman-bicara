@@ -52,7 +52,7 @@ export default function AddPage() {
         <div
           data-placeholder="Mau cerita apa hari ini?"
           contentEditable="true"
-          className="w-full h-40 shadow-xl rounded-lg border"
+          className="w-full h-40 shadow-xl rounded-lg border p-4"
           onInput={onInputHandler}
         />
       </div>

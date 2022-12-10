@@ -44,49 +44,54 @@ function DetailPageMain({ posts }) {
   };
 
   return (
-    <div className="bg-[#E6E5F3] w-full rounded-md shadow-md h-auto py-3 px-3 my-5 xs:w-[334px] xs:h-[150px] xs:mx-auto xs:">
-      <div className="w-full h-16 flex items-center justify-between ">
-        <div className="flex">
-          <img className=" rounded-full w-10 h-10 mr-3" src="/assets/image/profildefault.png" alt="profilepicture" />
-          <div>
-            <h3 className="text-md font-semibold ">
-              Anonymous
-            </h3>
+    <div className="bg-[#E6E5F3] rounded-lg shadow-lg p-10 my-10 mx-auto max-w-2xl w-[80%]">
+      <div className="flex mb-10">
+        <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
+        <div className="grow ml-4">
+          <div className="flex justify-between">
+            <h3 className="font-bold">Anonymous</h3>
+            <p className="text-gray-500">{new Date(posts.attributes.createdAt).toDateString()}</p>
           </div>
+          <p>{posts.attributes.desc}</p>
         </div>
-        <p className="text-xs text-gray-500">
-          {new Date(posts.attributes.createdAt).toDateString()}
-        </p>
       </div>
-      {' '}
-      <p>{posts.attributes.desc}</p>
 
-      <form onSubmit={onSubmitHandler}>
-        <input
-          value={commenterInput}
-          onChange={onChangeCommenterHandler}
-          type="text"
-          className="block"
-          placeholder="Who are you ?"
-          required
-        />
-        <input
-          value={commentInput}
-          onChange={onChangeCommentHandler}
-          type="text"
-          className="block"
-          placeholder="Write something..."
-          required
-        />
-        <button
-          className=""
-          type="submit"
-        >
-          Post Comment
-        </button>
-      </form>
+      <p>
+        {posts.attributes.comments.data.length}
+        {' '}
+        Comments
+      </p>
 
-      {posts.attributes.comments.data.map((comment) => <DetailPageComment comment={comment} key={comment.id} />)}
+      <hr className="h-1 bg-slate-400 rounded-full" />
+
+      <div className="ml-10">
+        <form onSubmit={onSubmitHandler} className="mt-5">
+          <input
+            value={commenterInput}
+            onChange={onChangeCommenterHandler}
+            type="text"
+            className="block w-full rounded-lg p-2 mb-2"
+            placeholder="Who are you ?"
+            required
+          />
+          <input
+            value={commentInput}
+            onChange={onChangeCommentHandler}
+            type="text"
+            className="block w-full rounded-lg p-2 mb-4"
+            placeholder="Write something..."
+            required
+          />
+          <button
+            className="text-white bg-[#4949C9] px-6 py-2 rounded-xl hover:scale-105 transition-all"
+            type="submit"
+          >
+            Comment
+          </button>
+        </form>
+
+        {posts.attributes.comments.data.map((comment) => <DetailPageComment comment={comment} key={comment.id} />)}
+      </div>
     </div>
   );
 }
