@@ -24,7 +24,7 @@ function App() {
   const slicing = true;
   if (slicing) {
     return (
-      <LandingPage />
+      <AddPage />
     );
   }
   // hapus kalau udah selesai slicing
