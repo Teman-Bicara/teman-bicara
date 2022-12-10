@@ -33,7 +33,7 @@ function LoginInput({ login }) {
       onSubmit={onSubmitHandler}
       className="mt-12 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
     >
-      <label htmlFor="username" className="md:text-center">Username</label>
+      <label htmlFor="username" className="md:text-center">Email or username</label>
       <input
         id="username"
         type="text"

@@ -80,11 +80,11 @@ function App() {
       <header className="xs:hidden">
         <HomePageNavDesktop logout={onLogout} />
       </header>
-      <main>
+      <main className="font-inter">
         <Routes>
-          <Route path={detail} element={<DetailPage />} />
           <Route path={homePage} element={<HomePage />} />
           <Route path={addPage} element={<AddPage />} />
+          <Route path={detail} element={<DetailPage />} />
         </Routes>
       </main>
       <footer className="sm:hidden fixed inset-x-0 bottom-0 w-full">

@@ -4,7 +4,7 @@ import PostItem from './PostItem';
 
 export default function Posts({ posts }) {
   return (
-    <div>
+    <div className="pb-40">
       {posts.map((post) => (
         <PostItem post={post} key={post.id} />
       ))}
