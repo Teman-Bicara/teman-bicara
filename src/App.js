@@ -16,28 +16,18 @@ function App() {
 
   const [authedUser, setAuthedUser] = useState(null);
 
-<<<<<<< HEAD
-  if (loading) {
-    return null;
-  }
+  // if (loading) {
+  //   return null;
+  // }
 
   // hapus kalau udah selesai slicing
   const slicing = true;
   if (slicing) {
     return (
-      <AddPost />
+      <AddPage />
     );
   }
   // hapus kalau udah selesai slicing
-=======
-  // // hapus kalau udah selesai slicing
-  // const slicing = true;
-  // if (slicing) {
-  //   return (
-  //     <AddPage />
-  //   );
-  // }
-  // // hapus kalau udah selesai slicing
 
   const onLoginSucces = ({ jwt, user }) => {
     setAuthedUser(user);
@@ -51,7 +41,6 @@ function App() {
 
     setAuthedUser(null);
   };
->>>>>>> 9c257f24e14839163beb3dfc06151e134e680851
 
   if (authedUser === null) {
     return (
