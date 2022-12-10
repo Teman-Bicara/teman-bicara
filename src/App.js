@@ -77,10 +77,10 @@ function App() {
 
   return (
     <>
-      <header className="xs:hidden">
+      <header className="xs:hidden fixed inset-x-0 top-0 w-full">
         <HomePageNavDesktop logout={onLogout} />
       </header>
-      <main className="font-inter">
+      <main className="font-inter sm:pt-20 xs:pb-24">
         <Routes>
           <Route path={homePage} element={<HomePage />} />
           <Route path={addPage} element={<AddPage />} />
