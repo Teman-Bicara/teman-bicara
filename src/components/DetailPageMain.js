@@ -56,10 +56,10 @@ function DetailPageMain({ posts }) {
         </div>
       </div>
 
-      <p>
+      <p className="font-semibold">
         {posts.attributes.comments.data.length}
         {' '}
-        Comments
+        <span>Comments</span>
       </p>
 
       <hr className="h-1 bg-slate-400 rounded-full" />

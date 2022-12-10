@@ -43,14 +43,14 @@ export default function AddPage() {
           type="submit"
           className="text-white bg-[#4949C9] px-6 py-2 rounded-xl hover:scale-110 transition-all"
         >
-          Kirim
+          Publish
         </button>
       </div>
 
       <div className="flex gap-4">
         <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
         <div
-          data-placeholder="Mau cerita apa hari ini?"
+          data-placeholder="Write your story here..."
           contentEditable="true"
           className="w-full h-40 shadow-xl rounded-lg border p-4"
           onInput={onInputHandler}
