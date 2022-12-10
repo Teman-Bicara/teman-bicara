@@ -13,8 +13,8 @@ function LandingPageNav() {
 
       <button className="xs:mr-6 xs:relative xs:z-10 sm:hidden" onClick={() => setOpenNav(!openNav)}>
         {openNav
-          ? <img src="assets/icons/circle-cross.svg" alt=" " width="44px" height="44px" />
-          : <img src="assets/icons/hamburger-menu.svg" alt=" " width="44px" height="44px" />}
+          ? <img src="/assets/icons/circle-cross.svg" alt=" " width="44px" height="44px" />
+          : <img src="/assets/icons/hamburger-menu.svg" alt=" " width="44px" height="44px" />}
       </button>
 
       <div className={`font-bold xs:font-montserrat xs:absolute xs:top-0 xs:bottom-0 xs:w-[80%] xs:bg-white xs:px-6 xs:pt-5 xs:shadow-xl xs:transition-all xs:duration-500

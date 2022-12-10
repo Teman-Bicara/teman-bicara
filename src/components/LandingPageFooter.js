@@ -11,12 +11,12 @@ function LandingPageFooter() {
         <ul className="flex gap-4 justify-center">
           <li>
             <a href="email" target="_blank">
-              <img src="assets/icons/email.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/email.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
           <li>
             <a href="website" target="_blank">
-              <img src="assets/icons/website.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/website.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
         </ul>
@@ -25,33 +25,33 @@ function LandingPageFooter() {
         <ul className="flex gap-4 justify-center">
           <li>
             <a href="linkedin" target="_blank">
-              <img src="assets/icons/linkedin.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/linkedin.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
           <li>
             <a href="github" target="_blank">
-              <img src="assets/icons/github.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/github.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
           <li>
             <a href="figma" target="_blank">
-              <img src="assets/icons/figma.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/figma.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
           <li>
             <a href="instagram" target="_blank">
-              <img src="assets/icons/instagram.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/instagram.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
           <li>
             <a href="youtube" target="_blank">
-              <img src="assets/icons/youtube.svg" alt=" " width="44px" height="44px" />
+              <img src="/assets/icons/youtube.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
         </ul>
         <div className="flex justify-center items-center pt-40">
           <img
-            src="assets/image/logo-tebi.svg"
+            src="/assets/image/logo-tebi.svg"
             alt="logo teman bicara"
             className="mx-[-1.25rem]"
           />
@@ -60,7 +60,7 @@ function LandingPageFooter() {
       </div>
       <div className="absolute bottom-12 sm:bottom-0 left-0 right-0 z-10">
         <img
-          src="assets/image/footer2.svg"
+          src="/assets/image/footer2.svg"
           alt=" "
           className="scale-y-[3] scale-x-125 sm:scale-100"
         />

@@ -6,7 +6,7 @@ function PostItem({ post }) {
     <Link to={`/posts/${post.id}`}>
 
       <div className="flex bg-[#E6E5F3] rounded-lg shadow-lg p-4">
-        <img className="rounded-full w-10 h-10" src="assets/image/profildefault.png" alt="profilepicture" width="100%" height="auto" />
+        <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
 
         <div className="grow ml-4">
           <div className="flex justify-between">

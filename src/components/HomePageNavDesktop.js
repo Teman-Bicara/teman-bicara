@@ -6,7 +6,7 @@ export default function HomePageNavDesktop({ logout }) {
     <section className="bg-white shadow-lg font-inter">
 
       <div className="container mx-auto flex justify-between items-center">
-        <img src="assets/image/logo-tebi.svg" alt=" " />
+        <img src="/assets/image/logo-tebi.svg" alt=" " />
 
         <div className="flex gap-16 mr-16 font-semibold">
           <Link

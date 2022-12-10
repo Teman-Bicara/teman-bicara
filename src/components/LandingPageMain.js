@@ -13,17 +13,17 @@ function LandingPageMain() {
               {' '}
               <span className="block text-[#8C4AF7] xl:mb-8">Teman Bicara</span>
             </h1>
-            <img src="assets/image/illustration1.svg" alt=" " className="mb-2 mx-auto md:hidden" />
+            <img src="/assets/image/illustration1.svg" alt=" " className="mb-2 mx-auto md:hidden" />
             <p className="md:text-xl text-justify">
               Teman Bicara adalah platform yang dapat memfasilitasi remaja sebagai tempat
               bercerita dalam bentuk forum yang dapat diakses melalui website Teman Bicara
               selama ada akses internet.
             </p>
           </div>
-          <img src="assets/image/illustration1.svg" alt=" " className="hidden mx-auto md:block" />
+          <img src="/assets/image/illustration1.svg" alt=" " className="hidden mx-auto md:block" />
         </section>
         <section className="mb-4 md:grid md:grid-cols-2 md:gap-8 md:mb-24 md:items-center">
-          <img src="assets/image/illustration2.svg" alt=" " className="mb-2 mx-auto" />
+          <img src="/assets/image/illustration2.svg" alt=" " className="mb-2 mx-auto" />
           <p className="md:text-xl text-justify">
             Kenapa harus menggunakan
             {' '}
@@ -33,7 +33,7 @@ function LandingPageMain() {
           </p>
         </section>
         <section className="mb-4 md:grid md:grid-cols-2 md:gap-8 md:mb-24 md:items-center">
-          <img src="assets/image/illustration3.svg" alt=" " className="mb-4 mx-auto md:order-2" />
+          <img src="/assets/image/illustration3.svg" alt=" " className="mb-4 mx-auto md:order-2" />
           <p className="md:text-xl text-justify">
             Dengan adanya platform forum ini diharapkan para remaja lebih berani untuk menceritakan permasalahan kesehatan mental yang sedang dialami pada orang lain.
           </p>
