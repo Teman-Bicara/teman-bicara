@@ -2,7 +2,7 @@ import React from 'react';
 
 function LandingPageFooter() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden" id="contact-us">
       <hr className="absolute left-0 right-0 top-14 h-2 bg-white z-10" />
 
       <div className="relative z-20">
