@@ -2,10 +2,13 @@
 /* eslint-disable no-unused-expressions */
 import axios from 'axios';
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function LoginInput() {
+function LoginInput({ login }) {
   const identiferRef = useRef();
   const passwordRef = useRef();
+
+  const navigate = useNavigate();
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -14,7 +17,11 @@ function LoginInput() {
         identifier: identiferRef.current.value,
         password: passwordRef.current.value,
       });
-      res.data && window.location.replace('/home');
+      login({
+        jwt: res.data.jwt,
+        user: res.data.user,
+      });
+      navigate('/');
     } catch (err) {
       alert(err);
     }

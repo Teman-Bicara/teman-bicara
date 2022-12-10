@@ -1,14 +1,16 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-expressions */
-import React, { useState } from 'react';
 import axios from 'axios';
-// import useInput from '../hooks/useInput';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterInput() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -17,7 +19,7 @@ function RegisterInput() {
       const res = await axios.post('http://localhost:1337/api/auth/local/register', {
         username, email, password,
       });
-      res.data && window.location.replace('/login');
+      res.data && navigate('/login');
     } catch (err) {
       setError(true);
     }

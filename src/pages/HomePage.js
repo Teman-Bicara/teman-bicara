@@ -1,5 +1,4 @@
 import React from 'react';
-import HomePageNav from '../components/HomePageNav';
 import HomePageMain from '../components/HomePageMain';
 
 export default function HomePage() {
@@ -12,9 +11,6 @@ export default function HomePage() {
       <main>
         <HomePageMain />
       </main>
-      <footer>
-        <HomePageNav />
-      </footer>
     </>
   );
 }
