@@ -76,9 +76,9 @@ function App() {
       </header>
       <main>
         <Routes>
+          <Route path={detail} element={<DetailPage />} />
           <Route path={homePage} element={<HomePage />} />
           <Route path={addPage} element={<AddPage />} />
-          <Route path={detail} element={<DetailPage />} />
         </Routes>
       </main>
       <footer>
