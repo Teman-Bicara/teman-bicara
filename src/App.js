@@ -21,12 +21,12 @@ function App() {
   }
 
   // hapus kalau udah selesai slicing
-  // const slicing = true;
-  // if (slicing) {
-  //   return (
-  //     <AddPost />
-  //   );
-  // }
+  const slicing = true;
+  if (slicing) {
+    return (
+      <AddPost />
+    );
+  }
   // hapus kalau udah selesai slicing
 
   if (authedUser === null) {
