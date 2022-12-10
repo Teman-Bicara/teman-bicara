@@ -24,7 +24,7 @@ function LandingPageFooter() {
             </a>
           </li>
           <li>
-            <a href="youtube" target="_blank">
+            <a href="https://www.youtube.com/channel/UCkXQBg8Y0CREUZtRUzt8IFA" target="_blank" rel="noreferrer">
               <img src="/assets/icons/youtube.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
