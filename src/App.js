@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import AddPost from './pages/AddPage';
+import HomePageNav from './components/HomePageNav';
+import AddPage from './pages/AddPage';
 import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
@@ -8,14 +9,14 @@ import RegisterPage from './pages/RegisterPage';
 
 function App() {
   const landingPage = '/*';
+  const homePage = '/*';
   const login = '/login';
   const register = '/register';
-  const homePage = '/home';
-  const addPost = '/new/post';
+  const addPage = '/new/post';
 
-  const authedUser = null;
-  const loading = false;
+  const [authedUser, setAuthedUser] = useState(null);
 
+<<<<<<< HEAD
   if (loading) {
     return null;
   }
@@ -28,29 +29,54 @@ function App() {
     );
   }
   // hapus kalau udah selesai slicing
+=======
+  // // hapus kalau udah selesai slicing
+  // const slicing = true;
+  // if (slicing) {
+  //   return (
+  //     <AddPage />
+  //   );
+  // }
+  // // hapus kalau udah selesai slicing
+
+  const onLoginSucces = ({ jwt, user }) => {
+    setAuthedUser(user);
+    localStorage.setItem('accessToken', jwt);
+
+    console.log(authedUser);
+  };
+
+  const onLogout = () => {
+    localStorage.setItem('accessToken', '');
+
+    setAuthedUser(null);
+  };
+>>>>>>> 9c257f24e14839163beb3dfc06151e134e680851
 
   if (authedUser === null) {
     return (
-      <Routes>
-        <Route path={landingPage} element={<LandingPage />} />
-        <Route path={login} element={<LoginPage />} />
-        <Route path={register} element={<RegisterPage />} />
-        <Route path={homePage} element={<HomePage />} />
-        <Route path={addPost} element={<AddPost />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path={landingPage} element={<LandingPage />} />
+          <Route path={login} element={<LoginPage loginSuccess={onLoginSucces} />} />
+          <Route path={register} element={<RegisterPage />} />
+        </Routes>
+      </main>
     );
   }
 
   return (
-    <main>
-      <Routes>
-        <Route path={landingPage} element={<LandingPage />} />
-        <Route path={login} element={<LoginPage />} />
-        <Route path={register} element={<RegisterPage />} />
-        <Route path={homePage} element={<HomePage />} />
-        <Route path={addPost} element={<AddPost />} />
-      </Routes>
-    </main>
+    <>
+      <main>
+        <Routes>
+          <Route path={homePage} element={<HomePage />} />
+          <Route path={addPage} element={<AddPage />} />
+        </Routes>
+      </main>
+      <footer>
+        <HomePageNav logout={onLogout} username={authedUser.username || ''} />
+      </footer>
+    </>
   );
 }
 

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LoginInput from '../components/LoginInput';
 
-function LoginPage() {
+function LoginPage({ loginSuccess }) {
   return (
     <div className="min-h-screen w-full mx-auto max-w-[80%]">
       <img
@@ -13,7 +14,7 @@ function LoginPage() {
       <h2 className="mx-auto text-center text-2xl font-bold text-black">
         Teman Bicara
       </h2>
-      <LoginInput />
+      <LoginInput login={loginSuccess} />
       <p className="text-center text-base text-slate-600 lg:absolute lg:top-5 lg:right-10">
         Dont have an account?
         {' '}
