@@ -22,9 +22,9 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const token = localStorage.getItem('accessToken');
     const fetchGetUserLogged = async () => {
       try {
-        const token = localStorage.getItem('accessToken');
         const res = await axios.get(`${CONFIG.BASE_URL}/api/users/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -32,13 +32,16 @@ function App() {
         });
 
         setAuthedUser(res.data);
-        setLoading(false);
       } catch (err) {
         alert(err);
       }
     };
 
-    fetchGetUserLogged();
+    if (token) {
+      fetchGetUserLogged();
+    }
+
+    setLoading(false);
   }, []);
 
   const onLoginSucces = ({ jwt, user }) => {
