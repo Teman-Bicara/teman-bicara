@@ -3,6 +3,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CONFIG from '../global/config';
 
 function LoginInput({ login }) {
   const identiferRef = useRef();
@@ -13,7 +14,7 @@ function LoginInput({ login }) {
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post('http://localhost:1337/api/auth/local', {
+      const res = await axios.post(`${CONFIG.BASE_URL}/api/auth/local`, {
         identifier: identiferRef.current.value,
         password: passwordRef.current.value,
       });

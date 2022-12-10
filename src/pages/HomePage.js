@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import LoadingIndicator from '../components/LoadingIndicator';
 import PostsList from '../components/PostsList';
 import PostsListEmpty from '../components/PostsListEmpty';
+import CONFIG from '../global/config';
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -11,7 +12,7 @@ export default function HomePage() {
   useEffect(() => {
     const fetchGetNotes = async () => {
       try {
-        const res = await axios.get('http://localhost:1337/api/posts');
+        const res = await axios.get(`${CONFIG.BASE_URL}/api/posts`);
 
         setPosts(res.data.data);
         setLoading(false);

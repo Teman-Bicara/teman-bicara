@@ -3,6 +3,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CONFIG from '../global/config';
 
 function RegisterInput() {
   const [username, setUsername] = useState('');
@@ -16,7 +17,7 @@ function RegisterInput() {
     event.preventDefault();
     setError(false);
     try {
-      const res = await axios.post('http://localhost:1337/api/auth/local/register', {
+      const res = await axios.post(`${CONFIG.BASE_URL}/api/auth/local/register`, {
         username, email, password,
       });
       res.data && navigate('/login');

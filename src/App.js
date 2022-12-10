@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePageNav from './components/HomePageNav';
+import CONFIG from './global/config';
 import AddPage from './pages/AddPage';
 import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
@@ -31,7 +32,7 @@ function App() {
     const fetchGetUserLogged = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const res = await axios.get('http://localhost:1337/api/users/me', {
+        const res = await axios.get(`${CONFIG.BASE_URL}/api/users/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
