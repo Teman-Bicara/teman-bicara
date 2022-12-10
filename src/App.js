@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import HomePageNav from './components/HomePageNav';
+import HomePageNavDesktop from './components/HomePageNavDesktop';
+import HomePageNavMobile from './components/HomePageNavMobile';
 import CONFIG from './global/config';
 import AddPage from './pages/AddPage';
 import DetailPage from './pages/DetailPage';
@@ -40,9 +41,11 @@ function App() {
     if (token) {
       fetchGetUserLogged();
     }
-
-    setLoading(false);
   }, []);
+
+  useEffect(() => {
+    setLoading(false);
+  }, [authedUser]);
 
   const onLoginSucces = ({ jwt, user }) => {
     localStorage.setItem('accessToken', jwt);
@@ -74,8 +77,8 @@ function App() {
 
   return (
     <>
-      <header>
-        <HomePageNav logout={onLogout} username={authedUser.username} />
+      <header className="xs:hidden">
+        <HomePageNavDesktop logout={onLogout} />
       </header>
       <main>
         <Routes>
@@ -84,8 +87,8 @@ function App() {
           <Route path={addPage} element={<AddPage />} />
         </Routes>
       </main>
-      <footer>
-        <HomePageNav logout={onLogout} username={authedUser.username} />
+      <footer className="sm:hidden fixed inset-x-0 bottom-0 w-full">
+        <HomePageNavMobile logout={onLogout} username={authedUser.username} />
       </footer>
     </>
   );
