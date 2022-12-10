@@ -1,4 +1,5 @@
 import axios from 'axios';
+import parser from 'html-react-parser';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CONFIG from '../global/config';
@@ -52,7 +53,7 @@ function DetailPageMain({ posts }) {
             <h3 className="font-bold">Anonymous</h3>
             <p className="text-gray-500">{new Date(posts.attributes.createdAt).toDateString()}</p>
           </div>
-          <p>{posts.attributes.desc}</p>
+          <p>{parser(posts.attributes.desc)}</p>
         </div>
       </div>
 

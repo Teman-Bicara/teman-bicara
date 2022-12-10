@@ -1,3 +1,4 @@
+import parser from 'html-react-parser';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ function PostItem({ post }) {
             <h3 className="font-bold">Anonymous</h3>
             <p className="text-gray-500">{new Date(post.attributes.createdAt).toDateString()}</p>
           </div>
-          <p>{post.attributes.desc}</p>
+          <p>{parser(post.attributes.desc)}</p>
         </div>
       </div>
 
