@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePageNav from './components/HomePageNav';
 import CONFIG from './global/config';
 import AddPage from './pages/AddPage';
+import DetailPage from './pages/DetailPage';
 import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
@@ -14,19 +15,11 @@ function App() {
   const homePage = '/*';
   const login = '/login';
   const register = '/register';
-  const addPage = '/new/post';
+  const addPage = '/posts/new';
+  const detail = '/posts/:id';
 
   const [authedUser, setAuthedUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  // // hapus kalau udah selesai slicing
-  // const slicing = true;
-  // if (slicing) {
-  //   return (
-  //     <AddPage />
-  //   );
-  // }
-  // // hapus kalau udah selesai slicing
 
   useEffect(() => {
     const fetchGetUserLogged = async () => {
@@ -85,6 +78,7 @@ function App() {
         <Routes>
           <Route path={homePage} element={<HomePage />} />
           <Route path={addPage} element={<AddPage />} />
+          <Route path={detail} element={<DetailPage />} />
         </Routes>
       </main>
       <footer>

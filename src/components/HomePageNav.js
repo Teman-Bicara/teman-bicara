@@ -5,23 +5,24 @@
 import React from 'react';
 import { AiOutlineHome, AiOutlineLogout } from 'react-icons/ai';
 import { BsPlusCircle } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 export default function HomePageNav({ logout, username }) {
   return (
     <section id="bottom-navigation" className="bg-white shadow-lg">
       <div id="tabs" className="flex justify-between">
-        <a href="/home" className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
+        <Link to="/" className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
           <AiOutlineHome className="h-8 w-8 inline-block mb-1" />
           <span className="tab tab-home block text-xs">
             Beranda
           </span>
-        </a>
-        <a href="/new/post" className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
+        </Link>
+        <Link to="/posts/new" className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
           <BsPlusCircle className="h-8 w-8 inline-block mb-1" />
           <span className="tab tab-home block text-xs">
             Tambah
           </span>
-        </a>
+        </Link>
         <button onClick={logout} className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
           <AiOutlineLogout className="h-8 w-8 inline-block mb-1" />
           <span className="tab tab-home block text-xs">

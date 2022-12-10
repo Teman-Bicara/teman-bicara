@@ -21,7 +21,7 @@ export default function PostItem({ post }) {
         </div>
         <p className="text-xs text-gray-500">{new Date(post.attributes.createdAt).toDateString()}</p>
       </div>
-      <Link to={`/post/${post._id}`} className="link">
+      <Link to={`/posts/${post.id}`} className="link">
         {' '}
         <p>{post.attributes.desc}</p>
       </Link>
