@@ -5,7 +5,7 @@ function TeamProjectInfo() {
   return (
     <section className="bg-cover bg-no-repeat bg-center pt-8 pb-16" style={{ backgroundImage: 'url(\'assets/image/background-teamproject.png\')' }} id="about-us">
       <div className="max-w-[85%] mx-auto xl:max-w-[70%]">
-        <h2 className="font-bold text-base bg-white text-center text-[#304652] py-2 mb-8 mx-auto  max-w-md shadow-2xl xl:text-4xl xl:py-6 xl:max-w-xl">Team Project</h2>
+        <h2 className="font-bold text-base bg-white text-center text-[#304652] py-2 mb-8 mx-auto  max-w-md shadow-2xl xl:text-4xl xl:py-6 xl:max-w-xl">Our Team</h2>
         <div className="grid gap-20 mt-20 md:grid-cols-2 xl:gap-32">
           <div className="bg-[#FFFFFFAD] rounded-2xl relative px-11 shadow-2xl">
             <img src="assets/image/profil1.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
@@ -69,17 +69,21 @@ function TeamProjectInfo() {
             </p>
             <ul className="flex gap-8 mb-12">
               <li>
-                <a href="https://www.instagram.com/alifff_hanafiah/" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/_raihan2k_/?hl=id" target="_blank" rel="noreferrer">
                   <img src="assets/icons/instagramPersonal.svg" alt="" />
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/alifhanafiah/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/muhammad-raihan-ramadhan-62272b245/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src="assets/icons/linkedinPersonal.svg" alt="" />
                 </a>
               </li>
               <li>
-                <a href="https://github.com/alifhanafiah" target="_blank" rel="noreferrer">
+                <a href="https://github.com/Raihan-2k" target="_blank" rel="noreferrer">
                   <img src="assets/icons/githubPersonal.svg" alt="" />
                 </a>
               </li>
@@ -97,17 +101,17 @@ function TeamProjectInfo() {
             </p>
             <ul className="flex gap-8 mb-12">
               <li>
-                <a href="https://www.instagram.com/alifff_hanafiah/" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/laidalav_/" target="_blank" rel="noreferrer">
                   <img src="assets/icons/instagramPersonal.svg" alt="" />
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/alifhanafiah/" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/laidalavenia/" target="_blank" rel="noreferrer">
                   <img src="assets/icons/linkedinPersonal.svg" alt="" />
                 </a>
               </li>
               <li>
-                <a href="https://github.com/alifhanafiah" target="_blank" rel="noreferrer">
+                <a href="https://github.com/laidalavenia" target="_blank" rel="noreferrer">
                   <img src="assets/icons/githubPersonal.svg" alt="" />
                 </a>
               </li>
