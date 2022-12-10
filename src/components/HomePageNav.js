@@ -23,12 +23,14 @@ export default function HomePageNav({ logout, username }) {
             Tambah
           </span>
         </Link>
-        <button onClick={logout} className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
-          <AiOutlineLogout className="h-8 w-8 inline-block mb-1" />
-          <span className="tab tab-home block text-xs">
-            {username}
-          </span>
-        </button>
+        <Link to="/">
+          <button onClick={logout} className="w-full focus:text-sky-500 hover:text-sky-400 justify-center inline-block text-center pt-2 pb-1">
+            <AiOutlineLogout className="h-8 w-8 inline-block mb-1" />
+            <span className="tab tab-home block text-xs">
+              {username}
+            </span>
+          </button>
+        </Link>
       </div>
     </section>
   );
