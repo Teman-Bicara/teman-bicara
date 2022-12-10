@@ -12,10 +12,6 @@ function DetailPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log(posts);
-  }, [posts]);
-
-  useEffect(() => {
     const fetchGetPosts = async () => {
       try {
         const res = await axios.get(`${CONFIG.BASE_URL}/api/posts/${id}?populate=*`);
