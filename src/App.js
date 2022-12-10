@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePageNav from './components/HomePageNav';
 import AddPage from './pages/AddPage';
@@ -15,25 +16,41 @@ function App() {
   const addPage = '/new/post';
 
   const [authedUser, setAuthedUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // if (loading) {
-  //   return null;
+  // // hapus kalau udah selesai slicing
+  // const slicing = true;
+  // if (slicing) {
+  //   return (
+  //     <AddPage />
+  //   );
   // }
+  // // hapus kalau udah selesai slicing
 
-  // hapus kalau udah selesai slicing
-  const slicing = true;
-  if (slicing) {
-    return (
-      <AddPage />
-    );
-  }
-  // hapus kalau udah selesai slicing
+  useEffect(() => {
+    const fetchGetUserLogged = async () => {
+      try {
+        const token = localStorage.getItem('accessToken');
+        const res = await axios.get('http://localhost:1337/api/users/me', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        setAuthedUser(res.data);
+        setLoading(false);
+      } catch (err) {
+        alert(err);
+      }
+    };
+
+    fetchGetUserLogged();
+  }, []);
 
   const onLoginSucces = ({ jwt, user }) => {
-    setAuthedUser(user);
     localStorage.setItem('accessToken', jwt);
 
-    console.log(authedUser);
+    setAuthedUser(user);
   };
 
   const onLogout = () => {
@@ -41,6 +58,10 @@ function App() {
 
     setAuthedUser(null);
   };
+
+  if (loading) {
+    return null;
+  }
 
   if (authedUser === null) {
     return (
@@ -56,6 +77,9 @@ function App() {
 
   return (
     <>
+      <header>
+        <HomePageNav logout={onLogout} username={authedUser.username} />
+      </header>
       <main>
         <Routes>
           <Route path={homePage} element={<HomePage />} />
@@ -63,7 +87,7 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <HomePageNav logout={onLogout} username={authedUser.username || ''} />
+        <HomePageNav logout={onLogout} username={authedUser.username} />
       </footer>
     </>
   );

@@ -4,7 +4,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 import React from 'react';
-import { AiOutlineLike, AiOutlineShareAlt } from 'react-icons/ai';
 import { BiCommentDetail } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
@@ -15,25 +14,21 @@ export default function PostItem({ post }) {
         <div className="flex">
           <img className=" rounded-full w-10 h-10 mr-3" src="assets/image/profildefault.jpg" alt="profilepicture" />
           <div>
-            <h3 className="text-md font-semibold ">{post.username}</h3>
+            <h3 className="text-md font-semibold ">
+              Anonymous
+            </h3>
           </div>
         </div>
-        <p className="text-xs text-gray-500">{new Date(post.createdAt).toDateString()}</p>
+        <p className="text-xs text-gray-500">{new Date(post.attributes.createdAt).toDateString()}</p>
       </div>
       <Link to={`/post/${post._id}`} className="link">
         {' '}
-        <p>{post.desc}</p>
+        <p>{post.attributes.desc}</p>
       </Link>
 
       <div className="grid grid-cols-3 w-full px-5  my-3">
-        <a className="flex flex-row justify-center items-center w-full space-x-3 ">
-          <AiOutlineLike className="w-7 h-7 hover:text-blue-600 hover:scale-150 cursor-pointer" />
-        </a>
         <a className="flex flex-row justify-center items-center w-full space-x-3">
           <BiCommentDetail className="w-7 h-7 hover:text-yellow-600 hover:scale-150 cursor-pointer" />
-        </a>
-        <a className="flex flex-row justify-center items-center w-full space-x-3">
-          <AiOutlineShareAlt className="w-7 h-7 hover:text-red-600 hover:scale-150 cursor-pointer" />
         </a>
       </div>
     </div>

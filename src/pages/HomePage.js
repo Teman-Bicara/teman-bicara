@@ -1,16 +1,34 @@
-import React from 'react';
-import HomePageMain from '../components/HomePageMain';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import LoadingIndicator from '../components/LoadingIndicator';
+import PostsList from '../components/PostsList';
+import PostsListEmpty from '../components/PostsListEmpty';
 
 export default function HomePage() {
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchGetNotes = async () => {
+      try {
+        const res = await axios.get('http://localhost:1337/api/posts');
+
+        setPosts(res.data.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchGetNotes();
+  }, []);
+
   return (
     <>
-      <header>
-        <img src="assets/image/home.svg" alt="" className="relative w-[375px] h-[132px] left-0 top-0" />
-        <p className="absolute w-[121px] h-[44px] left-[74px] top-11 font-semibold text-base">Selamat Datang, Laida Lavenia...</p>
-      </header>
-      <main>
-        <HomePageMain />
-      </main>
+      {loading && <LoadingIndicator />}
+      {posts.length !== 0
+        ? <PostsList posts={posts} />
+        : <PostsListEmpty />}
     </>
   );
 }
