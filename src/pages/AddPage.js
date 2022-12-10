@@ -13,8 +13,7 @@ export default function AddPage() {
     setDesc(e.target.innerHTML);
   };
 
-  const onClickHandler = async (event) => {
-    event.preventDefault();
+  const onClickHandler = async () => {
     const token = localStorage.getItem('accessToken');
     try {
       await axios.post(`${CONFIG.BASE_URL}/api/posts`, {
@@ -37,10 +36,9 @@ export default function AddPage() {
     <>
       <BiArrowBack className="w-8 h-8 mt-5 ml-2" />
       <div
-        data-placeholder="Sebenarnya saya adalah ...."
+        data-placeholder="Mau cerita apa hari ini?"
         contentEditable="true"
         className="flex w-[296px] h-[177px] ml-10 mt-10 border font-inter text-slate-800"
-        placeholder="mau cerita apa hari ini?"
         onInput={onInputHandler}
       />
       <button
