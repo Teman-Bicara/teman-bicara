@@ -10,13 +10,8 @@ function LandingPageFooter() {
         <p className="mt-8 mb-2 text-white">Contact us</p>
         <ul className="flex gap-4 justify-center">
           <li>
-            <a href="email" target="_blank">
+            <a href="mailto:tebicara@gmail.com" target="_blank" rel="noreferrer">
               <img src="/assets/icons/email.svg" alt=" " width="44px" height="44px" />
-            </a>
-          </li>
-          <li>
-            <a href="website" target="_blank">
-              <img src="/assets/icons/website.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
         </ul>
@@ -24,23 +19,8 @@ function LandingPageFooter() {
         <p className="mt-4 mb-2 text-white">Follow us</p>
         <ul className="flex gap-4 justify-center">
           <li>
-            <a href="linkedin" target="_blank">
-              <img src="/assets/icons/linkedin.svg" alt=" " width="44px" height="44px" />
-            </a>
-          </li>
-          <li>
-            <a href="github" target="_blank">
+            <a href="https://github.com/Teman-Bicara" target="_blank" rel="noreferrer">
               <img src="/assets/icons/github.svg" alt=" " width="44px" height="44px" />
-            </a>
-          </li>
-          <li>
-            <a href="figma" target="_blank">
-              <img src="/assets/icons/figma.svg" alt=" " width="44px" height="44px" />
-            </a>
-          </li>
-          <li>
-            <a href="instagram" target="_blank">
-              <img src="/assets/icons/instagram.svg" alt=" " width="44px" height="44px" />
             </a>
           </li>
           <li>
