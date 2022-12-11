@@ -37,7 +37,7 @@ function LoginInput({ login }) {
       <input
         id="username"
         type="text"
-        placeholder="lazar@codeday.org"
+        placeholder="Enter your username or email"
         ref={identiferRef}
         className="input-field"
         required="true"
@@ -51,7 +51,7 @@ function LoginInput({ login }) {
         className="input-field"
         required="true"
       />
-      <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md hover:opacity-80">
+      <button type="submit" className="block w-full max-w-[30%] bg-button text-white mx-auto mt-12 py-3 rounded-md hover:opacity-80">
         Login
       </button>
     </form>

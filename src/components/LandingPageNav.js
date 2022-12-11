@@ -25,7 +25,7 @@ function LandingPageNav() {
           <li className="xs:mb-2">
             <a
               href="#contact-us"
-              className="xs:block xs:w-full transition hover:bg-[#8C4AF7] hover:text-white p-4 rounded-md whitespace-nowrap"
+              className="xs:block xs:w-full transition hover:bg-primary hover:text-white p-4 rounded-md whitespace-nowrap"
             >
               Contact Us
             </a>
@@ -34,7 +34,7 @@ function LandingPageNav() {
           <li className="xs:mb-2 sm:ml-1">
             <a
               href="#about-us"
-              className="xs:block xs:w-full transition hover:bg-[#8C4AF7] hover:text-white p-4 rounded-md whitespace-nowrap"
+              className="xs:block xs:w-full transition hover:bg-primary hover:text-white p-4 rounded-md whitespace-nowrap"
             >
               About Us
             </a>
@@ -45,8 +45,8 @@ function LandingPageNav() {
           <li className="xs:mb-2">
             <Link
               to="/login"
-              className="xs:block xs:w-full transition xs:hover:bg-[#8C4AF7] xs:hover:text-white xs:p-4 xs:rounded-md whitespace-nowrap
-            sm:text-[#8C4AF7] sm:border-2 sm:border-[#8C4AF7] sm:px-6 sm:py-1 sm:rounded-3xl sm:hover:bg-[#8C4AF7] sm:hover:text-white"
+              className="xs:block xs:w-full transition xs:hover:bg-primary xs:hover:text-white xs:p-4 xs:rounded-md whitespace-nowrap
+            sm:text-primary sm:border-2 sm:border-primary sm:px-6 sm:py-1 sm:rounded-3xl sm:hover:bg-primary sm:hover:text-white"
             >
               Login
             </Link>
@@ -55,8 +55,8 @@ function LandingPageNav() {
           <li className="xs:mb-2">
             <Link
               to="/register"
-              className="xs:block xs:w-full transition xs:hover:bg-[#8C4AF7] hover:text-white xs:p-4 xs:rounded-md whitespace-nowrap
-              sm:text-white sm:border-2 sm:border-[#8C4AF7] sm:px-6 sm:py-1 sm:rounded-3xl sm:bg-gradient-to-r sm:from-[#8C4AF7] sm:to-[#6C53FF] sm:ml-4"
+              className="xs:block xs:w-full transition xs:hover:bg-primary hover:text-white xs:p-4 xs:rounded-md whitespace-nowrap
+              sm:text-white sm:border-2 sm:border-primary sm:px-6 sm:py-1 sm:rounded-3xl sm:bg-gradient-to-r sm:from-primary sm:to-[#6C53FF] sm:ml-4"
             >
               Sign Up
             </Link>

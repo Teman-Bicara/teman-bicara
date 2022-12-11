@@ -9,7 +9,7 @@ function TeamProjectInfo() {
 
           <div data-aos="flip-left" className="bg-[#FFFFFFAD] rounded-2xl relative px-11 shadow-2xl">
             <img src="/assets/image/profil1.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
-            <h1 className="text-[#8C4AF7] font-bold text-2xl mt-20 mb-1">Muhammad Alif Hanafiah</h1>
+            <h1 className="text-primary font-bold text-2xl mt-20 mb-1">Muhammad Alif Hanafiah</h1>
             <p className="text-[#304652] font-bold mb-4">Universitas Putra Indonesia Yptk Padang</p>
             <p className="text-[#304652] font-bold mb-8">
               Saya adalah seorang mahasiswa yang memiliki passion dalam membangun aplikasi web yang interaktif dan memiliki aksesibilitas yang baik untuk penggunanya.
@@ -92,7 +92,7 @@ function TeamProjectInfo() {
 
           <div data-aos="flip-right" className="bg-[#FFFFFFAD] rounded-2xl relative px-11 shadow-2xl">
             <img src="/assets/image/profil4.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
-            <h1 className="text-[#8C4AF7] font-bold text-2xl mt-20 mb-1">Laida Lavenia. H</h1>
+            <h1 className="text-primary font-bold text-2xl mt-20 mb-1">Laida Lavenia. H</h1>
             <p className="text-[#304652] font-bold mb-4">
               Universitas Jember
             </p>

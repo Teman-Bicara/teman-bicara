@@ -71,7 +71,7 @@ function DetailPageMain({ posts }) {
         <div className="grow ml-4">
           <div className="flex justify-between items-center">
             <h3 className="font-bold">Anonymous</h3>
-            <p className="text-gray-500 xs:text-sm">{new Date(posts.attributes.createdAt).toDateString()}</p>
+            <p className="text-gray-500 xs:text-sm">{new Date(posts.attributes.createdAt).toLocaleDateString()}</p>
           </div>
           <p>{parser(posts.attributes.desc)}</p>
         </div>

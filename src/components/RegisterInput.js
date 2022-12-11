@@ -36,7 +36,7 @@ function RegisterInput() {
         <input
           id="name"
           type="name"
-          placeholder="Put Your Name Here..."
+          placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
           className="input-field"
           required="true"
@@ -46,13 +46,14 @@ function RegisterInput() {
         <input
           id="email"
           type="email"
-          placeholder="Put Your Email Here..."
+          placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
           className="input-field"
           required="true"
         />
 
         <label htmlFor="password" className="md:text-center">Password</label>
+        <span className="block text-xs text-red-400">Password must be 6 characters minimum!</span>
         <input
           type="password"
           placeholder="********"
@@ -60,11 +61,12 @@ function RegisterInput() {
           className="input-field"
           required="true"
         />
-        <button type="submit" className="block w-full max-w-[30%] bg-[#2E277D] text-white mx-auto mt-12 py-3 rounded-md whitespace-nowrap hover:opacity-80">
+        <button type="submit" className="block w-full max-w-[30%] bg-button text-white mx-auto mt-12 py-3 rounded-md whitespace-nowrap hover:opacity-80">
           Sign up
         </button>
+        {error && alert('something went wrong! and your password must be minimum 6 characters')}
       </form>
-      {error && <span>Something went wrong!</span>}
+
     </div>
 
   );

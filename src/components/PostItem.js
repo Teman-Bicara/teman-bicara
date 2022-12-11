@@ -12,7 +12,7 @@ function PostItem({ post }) {
         <div className="grow ml-4">
           <div className="flex justify-between">
             <h3 className="font-bold">Anonymous</h3>
-            <p className="text-gray-500">{new Date(post.attributes.createdAt).toDateString()}</p>
+            <p className="text-gray-500">{new Date(post.attributes.createdAt).toLocaleDateString()}</p>
           </div>
           <p>{parser(post.attributes.desc)}</p>
         </div>
