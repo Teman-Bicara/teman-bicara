@@ -654,6 +654,14 @@ html {
   z-index: -10;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1074,6 +1082,14 @@ html {
   padding-top: 3rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1219,6 +1235,12 @@ html {
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1553,8 +1575,44 @@ body {
     right: -100%;
   }
 
+  .xs\:z-50 {
+    z-index: 50;
+  }
+
+  .xs\:z-40 {
+    z-index: 40;
+  }
+
   .xs\:z-10 {
     z-index: 10;
+  }
+
+  .xs\:z-0 {
+    z-index: 0;
+  }
+
+  .xs\:-z-10 {
+    z-index: -10;
+  }
+
+  .xs\:-z-20 {
+    z-index: -20;
+  }
+
+  .xs\:-z-30 {
+    z-index: -30;
+  }
+
+  .xs\:-z-40 {
+    z-index: -40;
+  }
+
+  .xs\:-z-50 {
+    z-index: -50;
+  }
+
+  .xs\:z-30 {
+    z-index: 30;
   }
 
   .xs\:mr-6 {
@@ -1571,6 +1629,10 @@ body {
 
   .xs\:hidden {
     display: none;
+  }
+
+  .xs\:h-screen {
+    height: 100vh;
   }
 
   .xs\:w-\[80\%\] {
