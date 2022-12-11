@@ -22,7 +22,7 @@ function RegisterPage() {
         </span>
       </p>
       <div className="fixed bottom-0 left-0 min-w-full max-h-96 -z-10">
-        <img src="assets/image/footer1.svg" alt=" " />
+        <img src="/assets/image/footer1.svg" alt=" " />
       </div>
     </div>
   );

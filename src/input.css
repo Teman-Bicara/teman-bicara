@@ -1,6 +1,13 @@
 @tailwind base;
+
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+
 
 body {
   @apply overflow-x-hidden
@@ -8,4 +15,9 @@ body {
 
 .input-field {
   @apply block w-full bg-slate-100 font-extralight py-2 px-4 rounded-lg mb-4 mx-auto
+}
+
+[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: #6d6d6d;
 }

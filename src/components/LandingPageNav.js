@@ -5,19 +5,19 @@ function LandingPageNav() {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center mx-auto md:max-w-[90%]">
       <img
         src="assets/image/logo-tebi.svg"
         alt="logo teman bicara"
       />
 
-      <button className="xs:mr-6 xs:relative xs:z-10 sm:hidden" onClick={() => setOpenNav(!openNav)}>
+      <button className="xs:mr-6 xs:relative xs:z-40 sm:hidden" onClick={() => setOpenNav(!openNav)}>
         {openNav
-          ? <img src="assets/icons/circle-cross.svg" alt=" " width="44px" height="44px" />
-          : <img src="assets/icons/hamburger-menu.svg" alt=" " width="44px" height="44px" />}
+          ? <img src="/assets/icons/circle-cross.svg" alt=" " width="44px" height="44px" />
+          : <img src="/assets/icons/hamburger-menu.svg" alt=" " width="44px" height="44px" />}
       </button>
 
-      <div className={`font-bold xs:font-montserrat xs:absolute xs:top-0 xs:bottom-0 xs:w-[80%] xs:bg-white xs:px-6 xs:pt-5 xs:shadow-xl xs:transition-all xs:duration-500
+      <div className={`font-bold xs:font-montserrat xs:absolute xs:top-0 xs:bottom-0 xs:z-30 xs:w-[80%] xs:h-screen xs:bg-white xs:px-6 xs:pt-5 xs:shadow-xl xs:transition-all xs:duration-500
       ${openNav ? 'xs:right-0' : 'xs:right-[-100%] xs:opacity-0'} sm:flex sm:justify-between sm:w-[70%] xl:w-[60%]`}
       >
         <p className="text-2xl mb-14 sm:hidden">Menu</p>

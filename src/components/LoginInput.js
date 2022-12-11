@@ -1,17 +1,31 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-expressions */
-import React from 'react';
-// import PropTypes from 'prop-types';
-import useInput from '../hooks/useInput';
+import axios from 'axios';
+import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import CONFIG from '../global/config';
 
 function LoginInput({ login }) {
-  const [name, onNameHandler] = useInput('');
-  const [password, onPasswordHandler] = useInput('');
+  const identiferRef = useRef();
+  const passwordRef = useRef();
 
-  const onSubmitHandler = (event) => {
+  const navigate = useNavigate();
+
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
-
-    login({ name, password });
+    try {
+      const res = await axios.post(`${CONFIG.BASE_URL}/api/auth/local`, {
+        identifier: identiferRef.current.value,
+        password: passwordRef.current.value,
+      });
+      login({
+        jwt: res.data.jwt,
+        user: res.data.user,
+      });
+      navigate('/');
+    } catch (err) {
+      alert(err);
+    }
   };
 
   return (
@@ -19,12 +33,12 @@ function LoginInput({ login }) {
       onSubmit={onSubmitHandler}
       className="mt-12 block text-lg font-semibold text-slate-900 lg:flex lg:flex-col lg:items-center lg:p-0 sm:max-w-2xl mx-auto"
     >
-      <label htmlFor="username" className="md:text-center">Username</label>
+      <label htmlFor="username" className="md:text-center">Email or username</label>
       <input
         id="username"
         type="text"
         placeholder="lazar@codeday.org"
-        ref={onNameHandler}
+        ref={identiferRef}
         className="input-field"
         required="true"
       />
@@ -33,7 +47,7 @@ function LoginInput({ login }) {
       <input
         type="password"
         placeholder="********"
-        ref={onPasswordHandler}
+        ref={passwordRef}
         className="input-field"
         required="true"
       />
@@ -43,9 +57,5 @@ function LoginInput({ login }) {
     </form>
   );
 }
-
-// LoginInput.propTypes = {
-//   login: PropTypes.func.isRequired,
-// };
 
 export default LoginInput;
