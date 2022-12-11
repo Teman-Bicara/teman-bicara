@@ -1673,6 +1673,11 @@ body {
     font-family: Montserrat, sans-serif;
   }
 
+  .xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .xs\:opacity-0 {
     opacity: 0;
   }
