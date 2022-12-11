@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import LoadingIndicator from '../components/LoadingIndicator';
 import PostsList from '../components/PostsList';
 import PostsListEmpty from '../components/PostsListEmpty';
 import CONFIG from '../global/config';
@@ -24,12 +23,11 @@ export default function HomePage() {
     fetchGetNotes();
   }, []);
 
-  return (
-    <>
-      {loading && <LoadingIndicator />}
-      {posts.length !== 0
-        ? <PostsList posts={posts} />
-        : <PostsListEmpty />}
-    </>
-  );
+  if (loading) {
+    return null;
+  }
+
+  return posts.length !== 0
+    ? <PostsList posts={posts} />
+    : <PostsListEmpty />;
 }
