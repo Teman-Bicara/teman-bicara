@@ -21,7 +21,7 @@ function LandingPage() {
       <main className="font-inter pt-20">
         <LandingPageMain />
       </main>
-      <footer className="text-center bg-[#8C4AF7] font-poppins">
+      <footer className="text-center bg-primary font-poppins">
         <LandingPageFooter />
       </footer>
     </>

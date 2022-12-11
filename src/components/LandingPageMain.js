@@ -10,7 +10,7 @@ function LandingPageMain() {
             <h1 className="text-2xl font-bold text-center mt-8 mb-5 md:text-right lg:text-4xl xl:text-6xl">
               Mari bercerita di
               {' '}
-              <span className="block text-[#8C4AF7] xl:mb-8">Teman Bicara</span>
+              <span className="block text-primary xl:mb-8">Teman Bicara</span>
             </h1>
             <img data-aos="zoom-in" src="/assets/image/illustration1.svg" alt=" " className="mb-2 mx-auto md:hidden" />
             <p className="md:text-xl text-justify">
@@ -27,7 +27,7 @@ function LandingPageMain() {
           <p className="md:text-xl text-justify">
             Kenapa harus menggunakan
             {' '}
-            <span className="text-[#8C4AF7] font-semibold">Teman Bicara?</span>
+            <span className="text-primary font-semibold">Teman Bicara?</span>
             {' '}
             Karena di platform ini menyediakan forum untuk bercerita secara anonim maupun tidak bagi para remaja yang merasa ada gangguan kesehatan mental yang dialami dan bingung untuk menyampaikan apa yang sedang dialaminya.
           </p>

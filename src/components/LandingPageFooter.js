@@ -6,7 +6,7 @@ function LandingPageFooter() {
       <hr className="absolute left-0 right-0 top-14 h-2 bg-white z-10" />
 
       <div className="relative z-20">
-        <p className="mt-12 mx-auto px-4 font-bold font-montserrat bg-[#8C4AF7] w-fit">Get in touch with us</p>
+        <p className="mt-12 mx-auto px-4 font-bold font-montserrat bg-primary w-fit">Get in touch with us</p>
         <p className="mt-8 mb-2 text-white">Contact us</p>
         <ul className="flex gap-4 justify-center">
           <li>

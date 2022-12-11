@@ -11,7 +11,7 @@ export default function HomePageNavDesktop({ logout }) {
         <div className="flex gap-16 mr-16 font-semibold">
           <Link
             to="/"
-            className="min-w-[44px] min-h-[44px] px-4 rounded-md grid items-center hover:bg-[#834CDD] hover:text-white transition"
+            className="min-w-[44px] min-h-[44px] px-4 rounded-md grid items-center hover:bg-secondary hover:text-white transition"
           >
             <span className="">
               Home
@@ -20,7 +20,7 @@ export default function HomePageNavDesktop({ logout }) {
 
           <Link
             to="/posts/new"
-            className="min-w-[44px] min-h-[44px] px-4 rounded-md grid items-center hover:bg-[#834CDD] hover:text-white transition"
+            className="min-w-[44px] min-h-[44px] px-4 rounded-md grid items-center hover:bg-secondary hover:text-white transition"
           >
             <span className="">
               Write
@@ -30,7 +30,7 @@ export default function HomePageNavDesktop({ logout }) {
           <Link
             onClick={logout}
             to="/"
-            className="min-w-[44px] min-h-[44px] px-4 rounded-md grid items-center hover:bg-[#834CDD] hover:text-white transition"
+            className="min-w-[44px] min-h-[44px] px-4 rounded-md grid items-center hover:bg-secondary hover:text-white transition"
           >
             <span>Logout</span>
           </Link>

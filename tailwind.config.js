@@ -11,6 +11,11 @@ module.exports = {
       screens: {
         xs: { max: '640px' },
       },
+      colors: {
+        primary: '#8C4AF7',
+        secondary: '#834CDD',
+        button: '#2E277D',
+      },
     },
   },
   plugins: [],

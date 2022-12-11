@@ -6,26 +6,26 @@ import { Link } from 'react-router-dom';
 export default function HomePageNavMobile({ logout, username }) {
   return (
     <section className="bg-white shadow-2xl flex justify-around p-2">
-      <Link to="/" className="hover:text-[#834CDD] transition">
-        <AiOutlineHome className="w-11 h-11 mx-auto" />
+      <Link to="/" className="hover:text-secondary transition">
+        <AiOutlineHome className="w-9 h-9 mx-auto text-[#86838B] hover:text-secondary" />
         <p className="text-center">
-          Beranda
+          Home
         </p>
       </Link>
 
-      <Link to="/posts/new" className="hover:text-[#834CDD] transition">
-        <BsPlusCircle className="w-11 h-11 mx-auto" />
+      <Link to="/posts/new" className="hover:text-secondary transition">
+        <BsPlusCircle className="w-9 h-9 mx-auto text-[#86838B] hover:text-secondary" />
         <p className="text-center">
-          Tambah
+          Write
         </p>
       </Link>
 
       <Link
         onClick={logout}
         to="/"
-        className="hover:text-[#834CDD] transition"
+        className="hover:text-secondary transition"
       >
-        <AiOutlineLogout className="w-11 h-11 mx-auto" />
+        <AiOutlineLogout className="w-9 h-9 mx-auto text-[#86838B] hover:text-secondary" />
         <p className="text-center capitalize">
           Hi,
           {' '}

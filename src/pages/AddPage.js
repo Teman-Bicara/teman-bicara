@@ -49,9 +49,8 @@ export default function AddPage() {
 
       <div className="flex gap-4">
         <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
-        <div
-          data-placeholder="Write your story here..."
-          contentEditable="true"
+        <textarea
+          placeholder="Write your story here..."
           className="w-full h-40 shadow-xl rounded-lg border p-4"
           onInput={onInputHandler}
         />

@@ -22,7 +22,7 @@ Ini adalah beberapa core stack yang digunakan untuk membangun project saat ini:
 <br>
 
 ## Setup Development
-Untuk menjalankan projek ini dengan menggunakan npm secara lokal.
+Untuk menjalankan projek ini secara lokal.
 
 ```
 $ git clone https://github.com/Teman-Bicara/teman-bicara.git teman-bicara
@@ -31,11 +31,6 @@ $ npm install
 $ npm run dev (TailwindCSS)
 $ npm start
 
----
-Untuk menjalankan strapi database:
-$ cd api
-$ npm install
-$ npm run develop
 ```
 <br>
 
