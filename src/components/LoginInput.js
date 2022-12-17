@@ -3,6 +3,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import CONFIG from '../global/config';
 
 function LoginInput({ login }) {
@@ -13,6 +14,13 @@ function LoginInput({ login }) {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: `Welcome to Teman Bicara ${identiferRef.current.value}!`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
     try {
       const res = await axios.post(`${CONFIG.BASE_URL}/api/auth/local`, {
         identifier: identiferRef.current.value,

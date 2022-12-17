@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-expressions */
 import axios from 'axios';
+import Swal from 'sweetalert2';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CONFIG from '../global/config';
@@ -15,6 +16,22 @@ function RegisterInput() {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
+    Swal.fire({
+      title: `Are you sure to register ${username}?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, sure!',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          `Welcome ${username}!`,
+          'Please login to use app.',
+          'success',
+        );
+      }
+    });
     setError(false);
     try {
       const res = await axios.post(`${CONFIG.BASE_URL}/api/auth/local/register`, {
