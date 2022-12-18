@@ -9,6 +9,7 @@
     "aos": "^2.3.4",
     "axios": "^1.2.0",
     "html-react-parser": "^3.0.4",
+    "optimized-images-loader": "^0.4.0",
     "prop-types": "^15.8.1",
     "quill": "^1.3.6",
     "react": "^18.2.0",

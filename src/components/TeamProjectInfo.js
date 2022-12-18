@@ -1,14 +1,18 @@
 import React from 'react';
+import profil1 from '../profil1.webp';
+import profil2 from '../profil2.webp';
+import profil3 from '../profil3.webp';
+import profil4 from '../profil4.webp';
 
 function TeamProjectInfo() {
   return (
-    <section data-aos="fade-up" className="bg-cover bg-no-repeat bg-center pt-8 pb-16" style={{ backgroundImage: 'url(\'assets/image/background-teamproject.png\')' }} id="about-us">
+    <section data-aos="fade-up" className="bg-cover bg-no-repeat bg-center pt-8 pb-16" style={{ backgroundImage: 'url(\'assets/image/background-teamproject.webp\')' }} id="about-us">
       <div className="max-w-[85%] mx-auto xl:max-w-[70%]">
         <h2 className="font-bold text-base bg-white text-center text-[#304652] py-2 mb-8 mx-auto  max-w-md shadow-2xl xl:text-4xl xl:py-6 xl:max-w-xl">Our Team</h2>
         <div className="grid gap-20 mt-20 md:grid-cols-2 xl:gap-32">
 
           <div data-aos="flip-left" className="bg-[#FFFFFFAD] rounded-2xl relative px-11 shadow-2xl">
-            <img src="/assets/image/profil1.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
+            <img src={profil1} alt="Foto profil tim 1 " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
             <h1 className="text-primary font-bold text-2xl mt-20 mb-1">Muhammad Alif Hanafiah</h1>
             <p className="text-[#304652] font-bold mb-4">Universitas Putra Indonesia Yptk Padang</p>
             <p className="text-[#304652] font-bold mb-8">
@@ -34,7 +38,7 @@ function TeamProjectInfo() {
           </div>
 
           <div data-aos="flip-right" className="bg-[#26235CAD] rounded-2xl relative px-11 shadow-2xl">
-            <img src="/assets/image/profil2.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
+            <img src={profil2} alt="Foto profil tim 2" className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
             <h1 className="text-[#2DF8BB] font-bold text-2xl mt-20 mb-1">Kresna Satya Nugroho</h1>
             <p className="text-white font-bold mb-4">Universitas Tanjungpura</p>
             <p className="text-white font-bold mb-8">
@@ -60,7 +64,7 @@ function TeamProjectInfo() {
           </div>
 
           <div data-aos="flip-left" className="bg-[#304652AD] rounded-2xl relative px-11 shadow-2xl">
-            <img src="/assets/image/profil3.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
+            <img src={profil3} alt="Foto profil tim 3 " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
             <h1 className="text-[#2DF8BB] font-bold text-2xl mt-20 mb-1">Muhammad Raihan Ramadhan</h1>
             <p className="text-white font-bold mb-4">Universitas Nusa Mandiri</p>
             <p className="text-white font-bold mb-8">
@@ -91,7 +95,7 @@ function TeamProjectInfo() {
           </div>
 
           <div data-aos="flip-right" className="bg-[#FFFFFFAD] rounded-2xl relative px-11 shadow-2xl">
-            <img src="/assets/image/profil4.jpg" alt=" " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
+            <img src={profil4} alt="Foto profil tim 4 " className="w-[110px] h-[110px] rounded-full bg-cover absolute top-[-3rem] left-4" />
             <h1 className="text-primary font-bold text-2xl mt-20 mb-1">Laida Lavenia. H</h1>
             <p className="text-[#304652] font-bold mb-4">
               Universitas Jember
