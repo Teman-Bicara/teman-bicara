@@ -8,7 +8,6 @@ function PostItem({ post }) {
 
       <div className="flex bg-[#E6E5F3] rounded-lg shadow-lg p-4">
         <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
-
         <div className="grow ml-4">
           <div className="flex justify-between">
             <h3 className="font-bold">Anonymous</h3>
@@ -19,6 +18,7 @@ function PostItem({ post }) {
       </div>
 
     </Link>
+
   );
 }
 export default PostItem;

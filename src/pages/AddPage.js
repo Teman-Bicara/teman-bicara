@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
+import Swal from 'sweetalert2';
 import 'react-quill/dist/quill.snow.css';
 import { BiArrowBack } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
@@ -27,7 +28,13 @@ export default function AddPage() {
           Authorization: `Bearer ${token}`,
         },
       });
-
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your story has been added successfully!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate('/');
     } catch (err) {
       console.log(err);
