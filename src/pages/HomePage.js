@@ -13,7 +13,7 @@ export default function HomePage() {
       try {
         const res = await axios.get(`${CONFIG.BASE_URL}/api/posts`);
 
-        setPosts(res.data.data);
+        setPosts(res.data.data.reverse());
         setLoading(false);
       } catch (error) {
         console.log(error);

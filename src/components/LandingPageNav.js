@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +28,7 @@ function LandingPageNav() {
               href="#contact-us"
               className="xs:block xs:w-full transition hover:bg-primary hover:text-white p-4 rounded-md whitespace-nowrap"
             >
-              Contact Us
+              Contact
             </a>
           </li>
           <hr className="bg-[#DADADA] mb-6 sm:hidden" />
@@ -36,10 +37,20 @@ function LandingPageNav() {
               href="#about-us"
               className="xs:block xs:w-full transition hover:bg-primary hover:text-white p-4 rounded-md whitespace-nowrap"
             >
-              About Us
+              About
             </a>
           </li>
           <hr className="bg-[#DADADA] mb-6 sm:hidden" />
+          <li className="xs:mb-2 sm:ml-1">
+            <a
+              href="https://www.privacypolicyonline.com/live.php?token=gpVTrxYlhTiFFTkWSXrkdDzmaFi4QjJL"
+              target="_blank"
+              className="xs:block xs:w-full transition hover:bg-primary hover:text-white p-4 rounded-md whitespace-nowrap"
+              rel="noreferrer"
+            >
+              Terms and Service
+            </a>
+          </li>
         </ul>
         <ul className="sm:flex">
           <li className="xs:mb-2">

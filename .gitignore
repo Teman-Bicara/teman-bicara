@@ -124,3 +124,14 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#image
+profil1.webp
+profil2.webp
+profil3.webp
+profil4.webp
+
+#deployment
+.netlify/
+
+package-lock.json
