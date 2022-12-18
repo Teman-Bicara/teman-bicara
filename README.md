@@ -1,6 +1,6 @@
 <h2 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Teman Bicara ✨, MSIB PROJECT <img src="public/assets/meow_code.gif" width="30"></h2>
 
-<img src="public/assets/Tebi.png>
+<img src="public/assets/Tebi.png">
 
 <p align="center">
     <a href="https://github.com/Teman-Bicara/teman-bicara/issues"><img src="https://img.shields.io/github/issues/Teman-Bicara/teman-bicara" alt="GitHub issues"></a>
