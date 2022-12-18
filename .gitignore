@@ -132,6 +132,6 @@ profil3.webp
 profil4.webp
 
 #deployment
-.netlify
+.netlify/
 
 package-lock.json
