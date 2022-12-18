@@ -133,3 +133,5 @@ profil4.webp
 
 #deployment
 .netlify
+
+package-lock.json
