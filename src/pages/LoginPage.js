@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LoginInput from '../components/LoginInput';
 
 function LoginPage({ loginSuccess }) {
   return (
     <div className="min-h-screen w-full mx-auto max-w-[80%]">
-      <img
+      <LazyLoadImage
         src="assets/image/logo-tebi.svg"
         alt="logo teman bicara"
         className="mx-auto mb-[-1rem] pt-12"
@@ -22,7 +23,7 @@ function LoginPage({ loginSuccess }) {
         </span>
       </p>
       <div className="fixed bottom-0 left-0 min-w-full max-h-96 -z-10">
-        <img src="/assets/image/footer1.svg" alt=" " />
+        <LazyLoadImage src="/assets/image/footer1.svg" alt="gambar footer" />
       </div>
     </div>
   );

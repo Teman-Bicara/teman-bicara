@@ -1,13 +1,14 @@
 import parser from 'html-react-parser';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function PostItem({ post }) {
   return (
     <Link to={`/posts/${post.id}`}>
 
       <div className="flex bg-[#E6E5F3] rounded-lg shadow-lg p-4">
-        <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
+        <LazyLoadImage className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt="foto profil default" width="100%" height="auto" />
         <div className="grow ml-4">
           <div className="flex justify-between">
             <h3 className="font-bold">Anonymous</h3>

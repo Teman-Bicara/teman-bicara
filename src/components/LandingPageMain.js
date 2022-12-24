@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import TeamProjectInfo from './TeamProjectInfo';
 
 function LandingPageMain() {
@@ -12,18 +13,18 @@ function LandingPageMain() {
               {' '}
               <span className="block text-primary xl:mb-8">Teman Bicara</span>
             </h1>
-            <img data-aos="zoom-in" src="/assets/image/illustration1.svg" alt=" " className="mb-2 mx-auto md:hidden" />
+            <LazyLoadImage data-aos="zoom-in" src="/assets/image/illustration1.svg" alt="orang sedang diskusi" className="mb-2 mx-auto md:hidden" />
             <p className="md:text-xl text-justify">
               Teman Bicara adalah platform yang dapat memfasilitasi remaja sebagai tempat
               bercerita dalam bentuk forum yang dapat diakses melalui website Teman Bicara
               selama ada akses internet.
             </p>
           </div>
-          <img data-aos="fade-left" src="/assets/image/illustration1.svg" alt=" " className="hidden mx-auto md:block" />
+          <LazyLoadImage data-aos="fade-left" src="/assets/image/illustration1.svg" alt="orang sedang diskusi" className="hidden mx-auto md:block" />
         </section>
 
         <section data-aos="fade-up" className="mb-4 md:grid md:grid-cols-2 md:gap-8 md:mb-24 md:items-center">
-          <img src="/assets/image/illustration2.svg" alt=" " className="mb-2 mx-auto" />
+          <LazyLoadImage src="/assets/image/illustration2.svg" alt="orang sedang berkomunikasi virtual" className="mb-2 mx-auto" />
           <p className="md:text-xl text-justify">
             Kenapa harus menggunakan
             {' '}
@@ -34,7 +35,7 @@ function LandingPageMain() {
         </section>
 
         <section className="mb-4 md:grid md:grid-cols-2 md:gap-8 md:mb-24 md:items-center">
-          <img data-aos="fade-left" src="/assets/image/illustration3.svg" alt=" " className="mb-4 mx-auto md:order-2" />
+          <LazyLoadImage data-aos="fade-left" src="/assets/image/illustration3.svg" alt="orang sedang menelepon teman" className="mb-4 mx-auto md:order-2" />
           <p data-aos="fade-right" className="md:text-xl text-justify">
             Dengan adanya platform forum ini diharapkan para remaja lebih berani untuk menceritakan permasalahan kesehatan mental yang sedang dialami pada orang lain.
           </p>
