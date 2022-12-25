@@ -11,7 +11,7 @@ export default function HomePage() {
   useEffect(() => {
     const fetchGetNotes = async () => {
       try {
-        const res = await axios.get(`${CONFIG.BASE_URL}/api/posts`);
+        const res = await axios.get(`${CONFIG.BASE_URL}/api/posts?pagination[page]=1&pagination[pageSize]=100`);
 
         setPosts(res.data.data.reverse());
         setLoading(false);
