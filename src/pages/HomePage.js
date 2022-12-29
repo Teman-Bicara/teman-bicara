@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Paginator from '../components/Paginator';
 import PostsList from '../components/PostsList';
-import PostsListEmpty from '../components/PostsListEmpty';
 import CONFIG from '../global/config';
 
 export default function HomePage() {
@@ -27,7 +27,12 @@ export default function HomePage() {
     return null;
   }
 
-  return posts.length !== 0
-    ? <PostsList posts={posts} />
-    : <PostsListEmpty />;
+  return (
+    <>
+      <PostsList posts={posts} />
+      <div className="flex justify-center items-center">
+        <Paginator />
+      </div>
+    </>
+  );
 }
