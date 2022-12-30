@@ -2,6 +2,7 @@ import axios from 'axios';
 import parser from 'html-react-parser';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import CONFIG from '../global/config';
 import DetailPageComment from './DetailPageComment';
 
@@ -67,7 +68,7 @@ function DetailPageMain({ posts }) {
   return (
     <div className="bg-[#E6E5F3] rounded-lg shadow-lg p-10 my-10 mx-auto max-w-2xl w-[80%]">
       <div className="flex mb-10">
-        <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
+        <LazyLoadImage className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt="foto profil default" width="100%" height="auto" />
         <div className="grow ml-4">
           <div className="flex justify-between items-center">
             <h3 className="font-bold">Anonymous</h3>

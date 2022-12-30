@@ -1,4 +1,5 @@
 import React from 'react';
+import parser from 'html-react-parser';
 
 function DetailPageComment({ comment }) {
   return (
@@ -8,7 +9,7 @@ function DetailPageComment({ comment }) {
           {comment.attributes.commenter}
         </h3>
         <p className="text-slate-600">
-          {comment.attributes.comment}
+          {parser(comment.attributes.comment)}
         </p>
       </div>
       <hr className="h-[2px] bg-slate-400 rounded-full ml-8" />

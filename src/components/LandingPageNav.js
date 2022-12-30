@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 function LandingPageNav() {
@@ -7,15 +8,15 @@ function LandingPageNav() {
 
   return (
     <nav className="flex justify-between items-center mx-auto md:max-w-[90%]">
-      <img
+      <LazyLoadImage
         src="assets/image/logo-tebi.svg"
         alt="logo teman bicara"
       />
 
       <button className="xs:mr-6 xs:relative xs:z-40 sm:hidden" onClick={() => setOpenNav(!openNav)}>
         {openNav
-          ? <img src="/assets/icons/circle-cross.svg" alt=" " width="44px" height="44px" />
-          : <img src="/assets/icons/hamburger-menu.svg" alt=" " width="44px" height="44px" />}
+          ? <LazyLoadImage src="/assets/icons/circle-cross.svg" alt="icon circle " width="44px" height="44px" />
+          : <LazyLoadImage src="/assets/icons/hamburger-menu.svg" alt="icon hamburger " width="44px" height="44px" />}
       </button>
 
       <div className={`font-bold xs:font-montserrat xs:absolute xs:top-0 xs:bottom-0 xs:z-30 xs:w-[80%] xs:h-screen xs:bg-white xs:px-6 xs:pt-5 xs:shadow-xl xs:transition-all xs:duration-500

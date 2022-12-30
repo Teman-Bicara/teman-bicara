@@ -83,7 +83,6 @@ function RegisterInput() {
         </button>
         {error && alert('something went wrong! and your password must be minimum 6 characters')}
       </form>
-
     </div>
 
   );

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import Swal from 'sweetalert2';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-quill/dist/quill.snow.css';
 import { BiArrowBack } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
@@ -72,7 +73,7 @@ export default function AddPage() {
       </div>
 
       <div className="flex gap-4">
-        <img className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt=" " width="100%" height="auto" />
+        <LazyLoadImage className="rounded-full w-10 h-10" src="/assets/image/profildefault.png" alt="foto profil default" width="100%" height="auto" />
         <ReactQuill modules={modules} placeholder="Write your story here..." theme="snow" value={desc} onChange={setDesc} onInput={onInputHandler} />
       </div>
     </div>

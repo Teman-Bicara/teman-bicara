@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function HomePageNavDesktop({ logout }) {
   return (
     <section className="bg-white shadow-lg font-inter">
 
       <div className="container mx-auto flex justify-between items-center">
-        <img src="/assets/image/logo-tebi.svg" alt=" " />
+        <LazyLoadImage src="/assets/image/logo-tebi.svg" alt="logo tebi" />
 
         <div className="flex gap-16 mr-16 font-semibold">
           <Link

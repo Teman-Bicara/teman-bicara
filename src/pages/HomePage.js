@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Paginator from '../components/Paginator';
 import PostsList from '../components/PostsList';
-import PostsListEmpty from '../components/PostsListEmpty';
 import CONFIG from '../global/config';
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
   useEffect(() => {
     const fetchGetNotes = async () => {
       try {
-        const res = await axios.get(`${CONFIG.BASE_URL}/api/posts`);
+        const res = await axios.get(`${CONFIG.BASE_URL}/api/posts?pagination[page]=1&pagination[pageSize]=100`);
 
         setPosts(res.data.data.reverse());
         setLoading(false);
@@ -27,7 +27,12 @@ export default function HomePage() {
     return null;
   }
 
-  return posts.length !== 0
-    ? <PostsList posts={posts} />
-    : <PostsListEmpty />;
+  return (
+    <>
+      <PostsList posts={posts} />
+      <div className="flex justify-center items-center">
+        <Paginator />
+      </div>
+    </>
+  );
 }

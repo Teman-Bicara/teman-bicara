@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function LandingPageFooter() {
   return (
@@ -11,7 +12,7 @@ function LandingPageFooter() {
         <ul className="flex gap-4 justify-center">
           <li>
             <a href="mailto:tebicara@gmail.com" target="_blank" rel="noreferrer">
-              <img src="/assets/icons/email.svg" alt=" " width="44px" height="44px" />
+              <LazyLoadImage src="/assets/icons/email.svg" alt="logo email " width="44px" height="44px" />
             </a>
           </li>
         </ul>
@@ -20,17 +21,17 @@ function LandingPageFooter() {
         <ul className="flex gap-4 justify-center">
           <li>
             <a href="https://github.com/Teman-Bicara" target="_blank" rel="noreferrer">
-              <img src="/assets/icons/github.svg" alt=" " width="44px" height="44px" />
+              <LazyLoadImage src="/assets/icons/github.svg" alt="logo github" width="44px" height="44px" />
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/channel/UCkXQBg8Y0CREUZtRUzt8IFA" target="_blank" rel="noreferrer">
-              <img src="/assets/icons/youtube.svg" alt=" " width="44px" height="44px" />
+              <LazyLoadImage src="/assets/icons/youtube.svg" alt="logo youtube" width="44px" height="44px" />
             </a>
           </li>
         </ul>
         <div className="flex justify-center items-center pt-40">
-          <img
+          <LazyLoadImage
             src="/assets/image/logo-tebi.svg"
             alt="logo teman bicara"
             className="mx-[-1.25rem]"
@@ -39,9 +40,9 @@ function LandingPageFooter() {
         </div>
       </div>
       <div className="absolute bottom-12 sm:bottom-0 left-0 right-0 z-10">
-        <img
+        <LazyLoadImage
           src="/assets/image/footer2.svg"
-          alt=" "
+          alt="gambar footer"
           className="scale-y-[3] scale-x-125 sm:scale-100"
         />
       </div>
